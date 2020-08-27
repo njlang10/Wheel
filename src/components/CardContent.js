@@ -26,51 +26,6 @@ function isComplete(surveyResults) {
   return leftOvers.length === 0;
 }
 
-function SignUp({ onSubmit }) {
-  const [form] = Form.useForm();
-
-  const itemLayout = {
-    labelCol: { span: 8 },
-    layout: "horizontal",
-    size: "large"
-  };
-
-  return (
-    <>
-      <div style={{ display: "flex", flexDirection: "row" }}>
-        <div style={{ display: "flex", flexDirection: "column" }}>
-          <Typography.Title level={4}>
-            Get your results mailed to you
-          </Typography.Title>
-          <Typography.Paragraph style={{ textAlign: "left" }}>
-            Now that you've completed your first set of questions, make sure
-            tosign up to begin your personalized journey toward a healthier self
-          </Typography.Paragraph>
-        </div>
-        <div style={{ textAlign: "center" }}>
-          <div style={{ display: "inline-block" }}>
-            <Form form={form} onValuesChange={() => {}} {...itemLayout}>
-              <Form.Item label="First Name" name="firstname">
-                <Input placeholder="Hello!" />
-              </Form.Item>
-              <Form.Item label="Last Name" name="lastname">
-                <Input placeholder="Happy to have you!" />
-              </Form.Item>
-              <Form.Item label="Email" name="email">
-                <Input placeholder="myemail@address.com" />
-              </Form.Item>
-              <Form.Item>
-                <Button type="primary" onClick={() => onSubmit(form)}>
-                  Submit
-                </Button>
-              </Form.Item>
-            </Form>
-          </div>
-        </div>
-      </div>
-    </>
-  );
-}
 export default function CardContent({
   currentCategory,
   surveyResults,
@@ -137,46 +92,6 @@ export default function CardContent({
 
   steps.push(answerCard);
 
-  const duration = 185;
-
-  const defaultStyle = {
-    transition: `all ${duration}ms ease-out`,
-    transform: "translate(100%, 0)",
-    opacity: 0
-  };
-
-  const transitionStyles = {
-    entering: { opacity: 0 },
-    entered: { transform: "translate(0%, 0)", opacity: 1 },
-    exiting: { transform: "translateX(0)" },
-    exited: { transform: "translateX(-100vw)" }
-  };
-  // NOTE this is code to slide in and out. Remove this
-  const TransitionedSignup = ({ in: inProp }) => (
-    <Transition appear in={true} timeout={duration}>
-      {(state) => (
-        <div style={{ ...defaultStyle, ...transitionStyles[state] }}>
-          <SignUp
-            key="signup"
-            onSubmit={(formInfo) => {
-              setUserInfo((old) => {
-                const newVals = {
-                  firstName: formInfo.getFieldValue("firstname"),
-                  lastName: formInfo.getFieldValue("lastname"),
-                  email: formInfo.getFieldValue("email"),
-                  isSignedUp: true
-                };
-                return { ...old, ...newVals };
-              });
-              carouselRef.current.goTo(currentStep + 1, false);
-              setStep(currentStep + 1);
-            }}
-          />
-        </div>
-      )}
-    </Transition>
-  );
-
   return (
     <>
       {/* <TransitionedSignup in={true} /> */}
@@ -184,6 +99,7 @@ export default function CardContent({
         <div style={{ position: "relative" }}>
           <Button
             block
+            disabled={userInfo.isSignedUp === false}
             type="primary"
             onClick={() => {
               const emptySurveys = Object.keys(surveyResults).map((key) => {

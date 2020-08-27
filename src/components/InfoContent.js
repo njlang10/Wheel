@@ -50,21 +50,17 @@ export default function InfoContent({
           style={{
             ...{
               paddingTop: "20px",
+              // maxHeight: "35%",
               paddingRight: "5%",
-              position: "absolute",
-              maxHeight: "35%",
-              overflow: "auto"
+              paddingLeft: "5%",
+              textAlign: "center"
             }
-            // ...defaultStyle,
-            // ...transitionStyles[state]
           }}
         >
           <Typography.Title
             key={clickId.id + "title"}
             style={{
               ...{
-                paddingLeft: "5%",
-                textAlign: "left",
                 fontWeight: "bold",
                 fontSize: "15Px",
                 color: "black"
@@ -73,17 +69,20 @@ export default function InfoContent({
               ...transitionStyles[state]
             }}
           >
-            {clickId.isClicked ? "" : 'What is the "Soul Care Wheel" '}
+            {clickId.isClicked ? (
+              <div style={{ height: "18px" }} />
+            ) : (
+              'What is the "Soul Care Wheel" '
+            )}
           </Typography.Title>
           <Typography.Paragraph
             key={clickId.id + "paragraph"}
             style={{
               ...{
-                paddingLeft: "5%",
                 fontFamily: "Montserrat",
                 fontSize: "15Px",
                 color: "black",
-                textAlign: "left"
+                minHeight: "138px"
               },
               ...defaultStyle,
               ...transitionStyles[state]
@@ -97,35 +96,47 @@ export default function InfoContent({
   );
 
   return (
-    <div
-      style={{
-        height: "100%"
-      }}
-    >
-      <div style={{}}>
-        <Button
-          type="primary"
-          disabled={clickId.isClicked === false}
-          block
-          onClick={(_) => setCardContentView("survey")}
-        >
-          {clickId.isClicked === true
-            ? "Click Here to Begin Assessment"
-            : "Touch the Wheel for More Information"}
-        </Button>
-        <div
-          style={{ paddingLeft: "5%", paddingTop: "10px", paddingRight: "5%" }}
-        >
-          <ProgressBarCustom surveyResults={surveyResults} />
+    <>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column"
+        }}
+      >
+        <div style={{ flex: 1 }}>
+          <Button
+            type="primary"
+            disabled={clickId.isClicked === false}
+            block
+            onClick={(_) => setCardContentView("survey")}
+          >
+            {clickId.isClicked === true
+              ? "Click Here to Begin Assessment"
+              : "Touch the Wheel for More Information"}
+          </Button>
+          <div
+            style={{
+              flex: 1,
+              paddingLeft: "5%",
+              paddingTop: "10px",
+              paddingRight: "5%"
+            }}
+          >
+            <ProgressBarCustom surveyResults={surveyResults} />
+          </div>
+          {transitionText}
         </div>
-        <Row>{transitionText}</Row>
       </div>
-      <NewWheel
-        clickId={clickId}
-        setClickID={setClickID}
-        setCategory={setCategory}
-        transitionTitle={transitionTitle}
-      />
-    </div>
+      <div
+        style={{ position: "absolute", bottom: 0, right: 0, left: 0, top: 100 }}
+      >
+        <NewWheel
+          clickId={clickId}
+          setClickID={setClickID}
+          setCategory={setCategory}
+          transitionTitle={transitionTitle}
+        />
+      </div>
+    </>
   );
 }

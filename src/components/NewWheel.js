@@ -31,390 +31,384 @@ export default function NewWheel({
   transitionTitle
 }) {
   return (
-    <>
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center"
-          // height: "100%"
-        }}
+    <div
+      style={{ position: "absolute", bottom: 0, right: 0, left: 0, top: 150 }}
+    >
+      <svg
+        version="1.1"
+        id="Layer_1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlnsXlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        viewBox="0 200 612 392"
+        xmlSpace="preserve"
+        height="auto"
+        width="auto"
       >
-        <svg
-          version="1.1"
-          id="Layer_1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlnsXlink="http://www.w3.org/1999/xlink"
-          x="0px"
-          y="0px"
-          viewBox="0 90 612 792"
-          xmlSpace="preserve"
-          style={{ margin: "0 auto", display: "block", flexGrow: 1 }}
-          height="900"
-          width="1000"
-        >
-          <style
-            type="text/css"
-            dangerouslySetInnerHTML={{
-              __html:
-                "\n\t.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#F5F4F1;}\n\t.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#E5E3DC;}\n\t.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#69625A;}\n\t.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}\n\t.st4{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#F5F4F1;stroke:#69625A;stroke-width:0.25;stroke-miterlimit:10;}\n\t.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#4F6130;}\n\t.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#3F2F2D;}\n\t.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#BA714E;}\n\t.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#F5E0CE;}\n\t.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#9EACAE;}\n\t.st10{fill:#5E7B38;}\n\t.st11{fill:#FFFFFF;}\n\t.st12{fill:#E5E3DC;}\n\t.st13{fill:#3F2F2D;}\n\t.st14{fill:#5F7C38;stroke:#5F7C38;stroke-width:0.25;stroke-miterlimit:10;}\n\t.st15{fill:#3F2F2D;stroke:#3F2F2D;stroke-width:0.25;stroke-miterlimit:10;}\n"
+        <style
+          type="text/css"
+          dangerouslySetInnerHTML={{
+            __html:
+              "\n\t.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#F5F4F1;}\n\t.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#E5E3DC;}\n\t.st2{fill-rule:evenodd;clip-rule:evenodd;fill:#69625A;}\n\t.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}\n\t.st4{opacity:0.2;fill-rule:evenodd;clip-rule:evenodd;fill:#F5F4F1;stroke:#69625A;stroke-width:0.25;stroke-miterlimit:10;}\n\t.st5{fill-rule:evenodd;clip-rule:evenodd;fill:#4F6130;}\n\t.st6{fill-rule:evenodd;clip-rule:evenodd;fill:#3F2F2D;}\n\t.st7{fill-rule:evenodd;clip-rule:evenodd;fill:#BA714E;}\n\t.st8{fill-rule:evenodd;clip-rule:evenodd;fill:#F5E0CE;}\n\t.st9{fill-rule:evenodd;clip-rule:evenodd;fill:#9EACAE;}\n\t.st10{fill:#5E7B38;}\n\t.st11{fill:#FFFFFF;}\n\t.st12{fill:#E5E3DC;}\n\t.st13{fill:#3F2F2D;}\n\t.st14{fill:#5F7C38;stroke:#5F7C38;stroke-width:0.25;stroke-miterlimit:10;}\n\t.st15{fill:#3F2F2D;stroke:#3F2F2D;stroke-width:0.25;stroke-miterlimit:10;}\n"
+          }}
+        />
+        <g>
+          <path
+            id="group3"
+            style={clickCSS(3, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 3, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.mindset);
+              } else {
+                setCategory(wheelInfo.default);
+              }
             }}
+            className="st0"
+            d="M424.1,476c-8,12.6-17.6,23.5-28.4,32.7l-95.5-111.5l144.2-27C451.2,405.5,445,443.3,424.1,476z"
           />
-          <g>
-            <path
-              id="group3"
-              style={clickCSS(3, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 3, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.mindset);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st0"
-              d="M424.1,476c-8,12.6-17.6,23.5-28.4,32.7l-95.5-111.5l144.2-27C451.2,405.5,445,443.3,424.1,476z"
-            />
-            <path
-              id="group1"
-              style={clickCSS(1, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 1, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.soul);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st1"
-              d="M308.2,213.5c16.3,0,32.1,2.1,47.1,6c1.4,0.4,2.8,0.8,4.2,1.1c2,0.5,3.4,1.6,2.1,4.8l-9.7,31.6
+          <path
+            id="group1"
+            style={clickCSS(1, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 1, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.soul);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st1"
+            d="M308.2,213.5c16.3,0,32.1,2.1,47.1,6c1.4,0.4,2.8,0.8,4.2,1.1c2,0.5,3.4,1.6,2.1,4.8l-9.7,31.6
   c-13.8-4.2-28.5-6.5-43.7-6.5c-39.6,0-75.6,15.3-102.3,40.3L184.4,268c-3.6-4.1-3.3-5.1,1.4-9.1
   C218.3,230.3,261.4,213.5,308.2,213.5z"
-            />
-            <path
-              id="group1"
-              style={clickCSS(1, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 1, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.soul);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st0"
-              d="M307.2,250.5c15.1,0,29.6,2.3,43.4,6.5l-43.3,142.3L205.8,290.8C232.3,265.8,268,250.5,307.2,250.5z"
-            />
-            <path
-              id="group5"
-              style={clickCSS(5, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 5, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.movement);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st2"
-              d="M151.5,479.6c-7.3-14.2-12.5-29-15.8-43.9c-0.3-1.4-0.6-2.8-0.9-4.2c-0.4-2-0.1-3.7,3.3-4l32.2-5.8
+          />
+          <path
+            id="group1"
+            style={clickCSS(1, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 1, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.soul);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st0"
+            d="M307.2,250.5c15.1,0,29.6,2.3,43.4,6.5l-43.3,142.3L205.8,290.8C232.3,265.8,268,250.5,307.2,250.5z"
+          />
+          <path
+            id="group5"
+            style={clickCSS(5, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 5, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.movement);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st2"
+            d="M151.5,479.6c-7.3-14.2-12.5-29-15.8-43.9c-0.3-1.4-0.6-2.8-0.9-4.2c-0.4-2-0.1-3.7,3.3-4l32.2-5.8
   c2.5,14,7,27.8,13.8,41.1c17.7,34.6,47.3,59.2,81.3,71.2l-10.5,29.1c-2,5-3,5.2-8.7,2.9C206.5,550.6,172.4,520.6,151.5,479.6z"
-            />
-            <path
-              className="st3"
-              d="M183.9,462c-6.9-13.4-11.5-27.4-14-41.6l146.4-26.3L266,534C231.7,521.8,201.8,497,183.9,462z"
-            />
-            <path
-              className="st3"
-              d="M183.9,462c-6.9-13.4-11.5-27.4-14-41.6l146.4-26.3L266,534C231.7,521.8,201.8,497,183.9,462z"
-            />
-            <path
-              id="group4"
-              style={clickCSS(5, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 5, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.movement);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st0"
-              d="M184.1,462.9c-6.8-13.3-11.4-27.2-13.8-41.1l144.9-26l-49.8,138.4C231.4,522.1,201.8,497.5,184.1,462.9z"
-            />
-            <path
-              id="group4"
-              style={clickCSS(4, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 4, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.feelings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st3"
-              d="M299.5,541.1c-14.3-0.8-27.9-3.8-40.7-8.6l48.9-132.2l90,108.3C371.3,530.8,336.7,543.3,299.5,541.1z"
-            />
-            <path
-              id="group4"
-              style={clickCSS(4, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 4, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.feelings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st3"
-              d="M299.5,541.1c-14.3-0.8-27.9-3.8-40.7-8.6l48.9-132.2l90,108.3C371.3,530.8,336.7,543.3,299.5,541.1z"
-            />
-            <path
-              id="group4"
-              style={clickCSS(4, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 4, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.feelings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st4"
-              d="M299.5,541.1c-14.3-0.8-27.9-3.8-40.7-8.6l48.9-132.2l90,108.3C371.3,530.8,336.7,543.3,299.5,541.1z"
-            />
-            <path
-              id="group4"
-              style={clickCSS(4, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 4, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.feelings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st5"
-              d="M402.1,549l-23.3-27c6.7-3.9,13.2-8.7,19.2-13.6l18,21.4c3.1,3.9,4.5,6-0.8,10.1
+          />
+          <path
+            className="st3"
+            d="M183.9,462c-6.9-13.4-11.5-27.4-14-41.6l146.4-26.3L266,534C231.7,521.8,201.8,497,183.9,462z"
+          />
+          <path
+            className="st3"
+            d="M183.9,462c-6.9-13.4-11.5-27.4-14-41.6l146.4-26.3L266,534C231.7,521.8,201.8,497,183.9,462z"
+          />
+          <path
+            id="group4"
+            style={clickCSS(5, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 5, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.movement);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st0"
+            d="M184.1,462.9c-6.8-13.3-11.4-27.2-13.8-41.1l144.9-26l-49.8,138.4C231.4,522.1,201.8,497.5,184.1,462.9z"
+          />
+          <path
+            id="group4"
+            style={clickCSS(4, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 4, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.feelings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st3"
+            d="M299.5,541.1c-14.3-0.8-27.9-3.8-40.7-8.6l48.9-132.2l90,108.3C371.3,530.8,336.7,543.3,299.5,541.1z"
+          />
+          <path
+            id="group4"
+            style={clickCSS(4, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 4, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.feelings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st3"
+            d="M299.5,541.1c-14.3-0.8-27.9-3.8-40.7-8.6l48.9-132.2l90,108.3C371.3,530.8,336.7,543.3,299.5,541.1z"
+          />
+          <path
+            id="group4"
+            style={clickCSS(4, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 4, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.feelings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st4"
+            d="M299.5,541.1c-14.3-0.8-27.9-3.8-40.7-8.6l48.9-132.2l90,108.3C371.3,530.8,336.7,543.3,299.5,541.1z"
+          />
+          <path
+            id="group4"
+            style={clickCSS(4, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 4, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.feelings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st5"
+            d="M402.1,549l-23.3-27c6.7-3.9,13.2-8.7,19.2-13.6l18,21.4c3.1,3.9,4.5,6-0.8,10.1
   C410.9,543.2,406.5,546.2,402.1,549z"
-            />
-            <path
-              id="group6"
-              style={clickCSS(6, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 6, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.surroundings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st3"
-              d="M182.9,324.9c6.8-13.5,15.4-25.5,25.3-35.8l107.6,102.6l-142.5,41.9C162.9,398.8,165.2,360,182.9,324.9z"
-            />
-            <path
-              id="group6"
-              style={clickCSS(6, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 6, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.surroundings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st3"
-              d="M182.9,324.9c6.8-13.5,15.4-25.5,25.3-35.8l107.6,102.6l-142.5,41.9C162.9,398.8,165.2,360,182.9,324.9z"
-            />
-            <path
-              id="group6"
-              style={clickCSS(6, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 6, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.surroundings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st4"
-              d="M182.9,324.9c6.8-13.5,15.4-25.5,25.3-35.8l107.6,102.6l-142.5,41.9C162.9,398.8,165.2,360,182.9,324.9z"
-            />
-            <path
-              id="group6"
-              style={clickCSS(6, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 6, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.surroundings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st6"
-              d="M132.3,421l35.9-11.3c1,8.1,2.9,16.4,5.2,24.3l-28.2,8.5c-5,1.4-7.7,1.9-9.5-5
+          />
+          <path
+            id="group6"
+            style={clickCSS(6, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 6, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.surroundings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st3"
+            d="M182.9,324.9c6.8-13.5,15.4-25.5,25.3-35.8l107.6,102.6l-142.5,41.9C162.9,398.8,165.2,360,182.9,324.9z"
+          />
+          <path
+            id="group6"
+            style={clickCSS(6, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 6, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.surroundings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st3"
+            d="M182.9,324.9c6.8-13.5,15.4-25.5,25.3-35.8l107.6,102.6l-142.5,41.9C162.9,398.8,165.2,360,182.9,324.9z"
+          />
+          <path
+            id="group6"
+            style={clickCSS(6, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 6, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.surroundings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st4"
+            d="M182.9,324.9c6.8-13.5,15.4-25.5,25.3-35.8l107.6,102.6l-142.5,41.9C162.9,398.8,165.2,360,182.9,324.9z"
+          />
+          <path
+            id="group6"
+            style={clickCSS(6, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 6, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.surroundings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st6"
+            d="M132.3,421l35.9-11.3c1,8.1,2.9,16.4,5.2,24.3l-28.2,8.5c-5,1.4-7.7,1.9-9.5-5
   C134.3,432,133.2,426.4,132.3,421z"
-            />
-            <path
-              id="group3"
-              style={clickCSS(3, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 3, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.mindset);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st7"
-              d="M455.4,495.6c-8.4,13.5-18.4,25.6-29.4,36c-1,1-2.1,1.9-3.1,2.9c-1.5,1.4-3.1,1.9-5.1-0.8l-21.3-24.5
+          />
+          <path
+            id="group3"
+            style={clickCSS(3, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 3, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.mindset);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st7"
+            d="M455.4,495.6c-8.4,13.5-18.4,25.6-29.4,36c-1,1-2.1,1.9-3.1,2.9c-1.5,1.4-3.1,1.9-5.1-0.8l-21.3-24.5
   c10.7-9.3,20.2-20.3,28.1-32.9c20.5-32.9,26.4-70.8,19.4-106l30.3-6c5.3-0.8,5.9-0.1,6.9,5.9C488,412.1,479.7,456.6,455.4,495.6z"
-            />
-            <path
-              id="group3"
-              style={clickCSS(3, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 3, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.mindset);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st7"
-              d="M483.1,386l-35.9,6.8c-0.3-7.9-1.4-16.1-3.1-23.8l28.2-5c5-0.8,7.7-0.9,8.8,5.9
+          />
+          <path
+            id="group3"
+            style={clickCSS(3, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 3, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.mindset);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st7"
+            d="M483.1,386l-35.9,6.8c-0.3-7.9-1.4-16.1-3.1-23.8l28.2-5c5-0.8,7.7-0.9,8.8,5.9
   C482.1,375.2,482.7,380.7,483.1,386z"
-            />
-            <path
-              id="group2"
-              style={clickCSS(2, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                setClickID({ id: 2, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.connection);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st8"
-              d="M464.3,312.4c7.2,14.4,12.4,29.4,15.6,44.4c0.3,1.4,0.6,2.8,0.9,4.3c0.4,2,0,3.7-3.4,4l-32.5,5.6
+          />
+          <path
+            id="group2"
+            style={clickCSS(2, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              setClickID({ id: 2, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.connection);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st8"
+            d="M464.3,312.4c7.2,14.4,12.4,29.4,15.6,44.4c0.3,1.4,0.6,2.8,0.9,4.3c0.4,2,0,3.7-3.4,4l-32.5,5.6
   c-2.4-14.1-6.9-28.2-13.7-41.7c-17.6-35.1-47.3-60.1-81.5-72.6l10.8-29.4c2.1-5,3.1-5.2,8.8-2.9
   C409.2,240.2,443.5,270.9,464.3,312.4z"
-            />
-            <path
-              id="group2"
-              style={clickCSS(2, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                setClickID({ id: 2, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.connection);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st3"
-              d="M431.2,329c6.8,13.5,11.3,27.5,13.7,41.7l-146.6,25.1l51.4-139.4C383.9,268.9,413.6,293.9,431.2,329z"
-            />
-            <path
-              id="group2"
-              style={clickCSS(2, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                setClickID({ id: 2, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.connection);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st3"
-              d="M431.2,329c6.8,13.5,11.3,27.5,13.7,41.7l-146.6,25.1l51.4-139.4C383.9,268.9,413.6,293.9,431.2,329z"
-            />
-            <path
-              id="group2"
-              style={clickCSS(2, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                setClickID({ id: 2, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.connection);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st4"
-              d="M431.2,329c6.8,13.5,11.3,27.5,13.7,41.7l-146.6,25.1l51.4-139.4C383.9,268.9,413.6,293.9,431.2,329z"
-            />
-            <path
-              id="group2"
-              style={clickCSS(2, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                setClickID({ id: 2, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.connection);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st8"
-              d="M384.3,231.1l-12.4,35.5c-7.1-4-14.9-7.5-22.6-10.3l10-27.7c1.9-4.9,3.1-7.3,9.7-4.6
+          />
+          <path
+            id="group2"
+            style={clickCSS(2, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              setClickID({ id: 2, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.connection);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st3"
+            d="M431.2,329c6.8,13.5,11.3,27.5,13.7,41.7l-146.6,25.1l51.4-139.4C383.9,268.9,413.6,293.9,431.2,329z"
+          />
+          <path
+            id="group2"
+            style={clickCSS(2, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              setClickID({ id: 2, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.connection);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st3"
+            d="M431.2,329c6.8,13.5,11.3,27.5,13.7,41.7l-146.6,25.1l51.4-139.4C383.9,268.9,413.6,293.9,431.2,329z"
+          />
+          <path
+            id="group2"
+            style={clickCSS(2, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              setClickID({ id: 2, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.connection);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st4"
+            d="M431.2,329c6.8,13.5,11.3,27.5,13.7,41.7l-146.6,25.1l51.4-139.4C383.9,268.9,413.6,293.9,431.2,329z"
+          />
+          <path
+            id="group2"
+            style={clickCSS(2, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              setClickID({ id: 2, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.connection);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st8"
+            d="M384.3,231.1l-12.4,35.5c-7.1-4-14.9-7.5-22.6-10.3l10-27.7c1.9-4.9,3.1-7.3,9.7-4.6
   C374.3,226.1,379.4,228.6,384.3,231.1z"
-            />
-            <path
-              className="st9"
-              d="M297.4,406.1c-5.9-4.2,13.9-12,17.8-21.4C309.5,389.8,304.1,410.9,297.4,406.1z"
-            />
-            <path
-              id="group1"
-              style={clickCSS(1, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 1, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.soul);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st1"
-              d="M198.7,248.6l26.2,27c-6.8,4.6-13.4,10-19.3,15.6l-20.3-21.4c-3.5-3.9-5.1-6,0.2-10.7
+          />
+          <path
+            className="st9"
+            d="M297.4,406.1c-5.9-4.2,13.9-12,17.8-21.4C309.5,389.8,304.1,410.9,297.4,406.1z"
+          />
+          <path
+            id="group1"
+            style={clickCSS(1, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 1, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.soul);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st1"
+            d="M198.7,248.6l26.2,27c-6.8,4.6-13.4,10-19.3,15.6l-20.3-21.4c-3.5-3.9-5.1-6,0.2-10.7
   C189.8,255.3,194.3,251.8,198.7,248.6z"
-            />
-            <g
-              id="group1"
-              style={clickCSS(1, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 1, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.soul);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-            >
-              <path
-                className="st6"
-                d="M265.4,277.8c-4.3,0.7-7.2,4.8-6.5,9.1c0.7,4.3,4.8,7.2,9.1,6.5c4.3-0.7,7.2-4.8,6.5-9.1
+          />
+          <g
+            id="group1"
+            style={clickCSS(1, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 1, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.soul);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+          >
+            <path
+              className="st6"
+              d="M265.4,277.8c-4.3,0.7-7.2,4.8-6.5,9.1c0.7,4.3,4.8,7.2,9.1,6.5c4.3-0.7,7.2-4.8,6.5-9.1
     C273.8,280,269.7,277.1,265.4,277.8z"
-              />
-              <g>
-                <path
-                  className="st10"
-                  d="M279.4,283.5c0.1,0,0.1,0.1,0.2,0.1c0.1,0,0.2,0.1,0.3,0.1c0.1,0.1,0.3,0.1,0.4,0.1c0.1,0,0.3,0,0.4,0
+            />
+            <g>
+              <path
+                className="st10"
+                d="M279.4,283.5c0.1,0,0.1,0.1,0.2,0.1c0.1,0,0.2,0.1,0.3,0.1c0.1,0.1,0.3,0.1,0.4,0.1c0.1,0,0.3,0,0.4,0
       c0.1,0,0.2-0.1,0.3-0.1c0.1,0,0.2-0.1,0.2-0.2c0-0.1,0.1-0.1,0.1-0.2c0-0.1,0-0.1,0-0.2c0-0.1-0.1-0.1-0.1-0.2
       c-0.1-0.1-0.2-0.1-0.3-0.1c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.2,0-0.3,0c-0.3-0.1-0.6-0.1-0.9-0.2c-0.3-0.1-0.5-0.2-0.7-0.3
       c-0.2-0.1-0.3-0.3-0.4-0.5c-0.1-0.2-0.2-0.4-0.2-0.6c0-0.2,0-0.5,0-0.7s0.2-0.4,0.3-0.6c0.2-0.2,0.4-0.3,0.6-0.4
@@ -427,10 +421,10 @@ export default function NewWheel({
       c-0.3,0.1-0.6,0.2-0.9,0.3c-0.3,0.1-0.6,0-0.9,0c-0.3-0.1-0.6-0.2-0.9-0.3c-0.1-0.1-0.2-0.1-0.3-0.2c-0.1-0.1-0.2-0.1-0.2-0.1
       l0,0c0,0,0,0,0,0s0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c-0.1-0.1-0.1-0.1-0.1-0.1c0,0,0-0.1,0.1-0.2l0.6-0.8c0,0,0.1-0.1,0.1-0.1
       c0,0,0.1,0,0.1,0C279.3,283.5,279.4,283.5,279.4,283.5z"
-                />
-                <path
-                  className="st10"
-                  d="M283.4,281.8c0-0.3-0.1-0.6,0-0.8c0-0.3,0.1-0.5,0.2-0.8c0.1-0.2,0.2-0.5,0.4-0.7s0.3-0.4,0.5-0.6
+              />
+              <path
+                className="st10"
+                d="M283.4,281.8c0-0.3-0.1-0.6,0-0.8c0-0.3,0.1-0.5,0.2-0.8c0.1-0.2,0.2-0.5,0.4-0.7s0.3-0.4,0.5-0.6
       c0.2-0.2,0.4-0.3,0.7-0.4s0.5-0.2,0.8-0.2c0.3,0,0.5-0.1,0.8,0c0.3,0,0.5,0.1,0.8,0.2c0.2,0.1,0.5,0.2,0.7,0.4
       c0.2,0.2,0.4,0.3,0.6,0.5c0.2,0.2,0.3,0.4,0.4,0.7c0.1,0.2,0.2,0.5,0.2,0.8c0,0.3,0.1,0.6,0,0.8s-0.1,0.5-0.2,0.8
       c-0.1,0.2-0.2,0.5-0.4,0.7c-0.2,0.2-0.3,0.4-0.5,0.6c-0.2,0.2-0.4,0.3-0.7,0.4c-0.2,0.1-0.5,0.2-0.8,0.2c-0.3,0-0.6,0.1-0.8,0
@@ -439,47 +433,47 @@ export default function NewWheel({
       c0.2,0,0.4,0.1,0.6,0c0.2,0,0.4-0.1,0.6-0.2c0.2-0.1,0.3-0.2,0.4-0.4c0.1-0.2,0.2-0.3,0.2-0.5c0-0.2,0-0.4,0-0.6
       c0-0.2-0.1-0.4-0.2-0.6s-0.2-0.3-0.4-0.4c-0.2-0.1-0.3-0.2-0.5-0.3c-0.2-0.1-0.4-0.1-0.6,0s-0.4,0.1-0.6,0.2s-0.3,0.3-0.4,0.4
       c-0.1,0.2-0.2,0.3-0.2,0.6C284.9,281.1,284.9,281.3,284.9,281.5z"
-                />
-                <path
-                  className="st10"
-                  d="M292,280.9c0,0.2,0.1,0.4,0.2,0.5s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.1,0.3,0.1s0.2,0,0.4,0
+              />
+              <path
+                className="st10"
+                d="M292,280.9c0,0.2,0.1,0.4,0.2,0.5s0.2,0.2,0.3,0.3c0.1,0.1,0.2,0.1,0.3,0.1s0.2,0,0.4,0
       c0.1,0,0.3-0.1,0.4-0.1c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.2,0.2-0.4c0-0.1,0-0.3,0-0.5l-0.6-3.3c0,0,0-0.1,0-0.1
       c0,0,0.1-0.1,0.1-0.1l1.2-0.2c0.1,0,0.1,0,0.2,0s0.1,0.1,0.1,0.1l0.6,3.3c0.1,0.5,0.1,0.9,0,1.2c-0.1,0.3-0.2,0.6-0.4,0.8
       s-0.4,0.4-0.7,0.5c-0.3,0.1-0.6,0.2-0.9,0.3c-0.3,0.1-0.7,0.1-1,0c-0.3,0-0.6-0.1-0.9-0.3c-0.3-0.2-0.5-0.4-0.7-0.7
       c-0.2-0.3-0.3-0.7-0.4-1.1l-0.6-3.3c0,0,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l1.2-0.2c0,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1
       L292,280.9z"
-                />
-                <path
-                  className="st10"
-                  d="M295.9,276.8c0,0,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l1.2-0.2c0,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.7,4.3
+              />
+              <path
+                className="st10"
+                d="M295.9,276.8c0,0,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l1.2-0.2c0,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.7,4.3
       l2.2-0.4c0,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.2,1c0,0,0,0.1,0,0.1c0,0-0.1,0.1-0.1,0.1l-3.5,0.6c-0.1,0-0.2,0-0.2-0.1
       L295.9,276.8z"
-                />
-              </g>
-              <g>
-                <path
-                  className="st11"
-                  d="M269.2,289.6l-1.9,0.3l-0.9-5.5l-1,1.3l-1.5-1.1l2.6-3.4l1.2-0.2L269.2,289.6z"
-                />
-              </g>
+              />
             </g>
-            <g
-              id="group2"
-              style={clickCSS(2, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 2, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.soul);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-            >
-              <g>
-                <path
-                  className="st10"
-                  d="M379.4,308.3c0,0.1,0,0.1,0,0.1c0,0-0.1,0.1-0.1,0.1l-1.2,0c-0.1,0-0.1,0-0.1,0s0-0.1,0-0.1
+            <g>
+              <path
+                className="st11"
+                d="M269.2,289.6l-1.9,0.3l-0.9-5.5l-1,1.3l-1.5-1.1l2.6-3.4l1.2-0.2L269.2,289.6z"
+              />
+            </g>
+          </g>
+          <g
+            id="group2"
+            style={clickCSS(2, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 2, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.soul);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+          >
+            <g>
+              <path
+                className="st10"
+                d="M379.4,308.3c0,0.1,0,0.1,0,0.1c0,0-0.1,0.1-0.1,0.1l-1.2,0c-0.1,0-0.1,0-0.1,0s0-0.1,0-0.1
       c0-0.2,0-0.3-0.1-0.5c0-0.2-0.1-0.3-0.2-0.5c-0.1-0.2-0.3-0.3-0.5-0.4c-0.2-0.1-0.4-0.2-0.6-0.2c-0.2,0-0.4,0-0.6,0
       c-0.2,0.1-0.4,0.1-0.6,0.3c-0.2,0.1-0.3,0.3-0.4,0.5c-0.1,0.2-0.2,0.4-0.2,0.5c0,0.2,0,0.4,0,0.6c0,0.2,0.1,0.4,0.3,0.6
       c0.1,0.1,0.2,0.3,0.4,0.4c0.1,0.1,0.3,0.2,0.4,0.2c0.1,0,0.1,0,0.1,0.1s0,0.1,0,0.1l-0.4,1.1c0,0.1-0.1,0.1-0.1,0.1
@@ -487,10 +481,10 @@ export default function NewWheel({
       c0-0.3,0-0.5,0-0.8c0-0.3,0.1-0.5,0.2-0.8c0.1-0.2,0.2-0.5,0.4-0.7c0.2-0.2,0.4-0.4,0.6-0.6c0.2-0.2,0.5-0.3,0.7-0.4
       c0.3-0.1,0.5-0.2,0.8-0.2c0.3,0,0.5,0,0.8,0c0.3,0,0.5,0.1,0.8,0.2c0.2,0.1,0.5,0.2,0.7,0.4c0.2,0.2,0.4,0.4,0.6,0.6
       c0.2,0.3,0.3,0.5,0.4,0.8C379.4,307.7,379.4,308,379.4,308.3z"
-                />
-                <path
-                  className="st10"
-                  d="M377.7,310.2c0.2-0.2,0.5-0.3,0.7-0.4c0.3-0.1,0.5-0.2,0.8-0.2c0.3,0,0.5,0,0.8,0c0.3,0,0.5,0.1,0.8,0.2
+              />
+              <path
+                className="st10"
+                d="M377.7,310.2c0.2-0.2,0.5-0.3,0.7-0.4c0.3-0.1,0.5-0.2,0.8-0.2c0.3,0,0.5,0,0.8,0c0.3,0,0.5,0.1,0.8,0.2
       c0.2,0.1,0.5,0.2,0.7,0.4c0.2,0.2,0.4,0.4,0.6,0.6c0.2,0.2,0.3,0.5,0.4,0.7c0.1,0.3,0.2,0.5,0.2,0.8c0,0.3,0,0.5,0,0.8
       c0,0.3-0.1,0.5-0.2,0.8c-0.1,0.2-0.2,0.5-0.4,0.7c-0.2,0.2-0.4,0.4-0.6,0.6c-0.2,0.2-0.5,0.3-0.7,0.4c-0.3,0.1-0.5,0.2-0.8,0.2
       s-0.5,0-0.8,0s-0.5-0.1-0.8-0.2c-0.2-0.1-0.5-0.2-0.7-0.4c-0.2-0.2-0.4-0.4-0.6-0.6c-0.2-0.2-0.3-0.5-0.4-0.7
@@ -499,33 +493,33 @@ export default function NewWheel({
       c0.2,0.1,0.4,0.2,0.6,0.2c0.2,0,0.4,0,0.6,0c0.2-0.1,0.4-0.1,0.6-0.3c0.2-0.1,0.3-0.3,0.4-0.5s0.2-0.4,0.2-0.6
       c0-0.2,0-0.4,0-0.6c0-0.2-0.1-0.4-0.3-0.6s-0.3-0.3-0.5-0.4c-0.2-0.1-0.4-0.2-0.6-0.2c-0.2,0-0.4,0-0.6,0
       C379,311.2,378.8,311.3,378.6,311.5z"
-                />
-                <path
-                  className="st10"
-                  d="M384.2,314.3c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.8,1.1c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1
+              />
+              <path
+                className="st10"
+                d="M384.2,314.3c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.8,1.1c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1
       c-0.2,0.6-0.5,1.2-0.7,1.8c-0.2,0.6-0.5,1.2-0.7,1.8l2.6-1.9c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.7,0.9c0,0,0,0.1,0,0.1
       c0,0,0,0.1-0.1,0.1l-4.5,3.3c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1-0.1l-0.8-1c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1
       c0.3-0.6,0.5-1.3,0.8-1.9s0.5-1.2,0.8-1.9l-2.8,2c0,0-0.1,0.1-0.1,0c0,0-0.1,0-0.1-0.1l-0.7-0.9c0,0,0-0.1,0-0.1
       c0,0,0-0.1,0.1-0.1L384.2,314.3z"
-                />
-                <path
-                  className="st10"
-                  d="M388.1,319.6c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.8,1.1c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1
+              />
+              <path
+                className="st10"
+                d="M388.1,319.6c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.8,1.1c0,0,0,0.1,0,0.1c0,0,0,0.1,0,0.1
       c-0.2,0.6-0.5,1.2-0.7,1.8c-0.2,0.6-0.5,1.2-0.7,1.8l2.6-1.9c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.7,0.9c0,0,0,0.1,0,0.1
       c0,0,0,0.1-0.1,0.1l-4.5,3.3c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1-0.1l-0.8-1c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1
       c0.3-0.6,0.5-1.3,0.8-1.9c0.3-0.6,0.5-1.2,0.8-1.9l-2.8,2c0,0-0.1,0.1-0.1,0s-0.1,0-0.1-0.1l-0.7-0.9c0,0,0-0.1,0-0.1
       c0,0,0-0.1,0.1-0.1L388.1,319.6z"
-                />
-                <path
-                  className="st10"
-                  d="M391.9,324.8c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l2.4,3.2c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.8,0.6
+              />
+              <path
+                className="st10"
+                d="M391.9,324.8c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l2.4,3.2c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.8,0.6
       c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.1-0.1l-1.5-2.1l-0.8,0.6l1.2,1.6c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.7,0.5c0,0-0.1,0-0.1,0
       c0,0-0.1,0-0.1-0.1l-1.2-1.6l-0.8,0.6l1.6,2.2c0.1,0.1,0.1,0.2,0,0.3l-0.8,0.6c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2-0.1l-2.4-3.3
       c0,0,0-0.1,0-0.1s0-0.1,0.1-0.1L391.9,324.8z"
-                />
-                <path
-                  className="st10"
-                  d="M397.6,333c0,0.1,0,0.1,0,0.1c0,0-0.1,0.1-0.1,0.1l-1.2,0c-0.1,0-0.1,0-0.1,0c0,0,0-0.1,0-0.1
+              />
+              <path
+                className="st10"
+                d="M397.6,333c0,0.1,0,0.1,0,0.1c0,0-0.1,0.1-0.1,0.1l-1.2,0c-0.1,0-0.1,0-0.1,0c0,0,0-0.1,0-0.1
       c0-0.2,0-0.3-0.1-0.5c0-0.2-0.1-0.3-0.2-0.4c-0.1-0.2-0.3-0.3-0.5-0.4c-0.2-0.1-0.4-0.2-0.6-0.2c-0.2,0-0.4,0-0.6,0
       c-0.2,0.1-0.4,0.1-0.6,0.3s-0.3,0.3-0.4,0.5c-0.1,0.2-0.2,0.4-0.2,0.5c0,0.2,0,0.4,0,0.6c0,0.2,0.1,0.4,0.3,0.6
       c0.1,0.1,0.2,0.3,0.4,0.4s0.3,0.2,0.4,0.2c0.1,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.1l-0.4,1.1c0,0.1-0.1,0.1-0.1,0.1c0,0-0.1,0-0.1,0
@@ -533,21 +527,21 @@ export default function NewWheel({
       c0-0.3,0.1-0.5,0.2-0.8c0.1-0.2,0.2-0.5,0.4-0.7s0.4-0.4,0.6-0.6c0.2-0.2,0.5-0.3,0.7-0.4c0.3-0.1,0.5-0.2,0.8-0.2
       c0.3,0,0.5,0,0.8,0c0.3,0,0.5,0.1,0.8,0.2c0.2,0.1,0.5,0.2,0.7,0.4c0.2,0.2,0.4,0.4,0.6,0.6c0.2,0.3,0.3,0.5,0.4,0.8
       C397.6,332.4,397.6,332.7,397.6,333z"
-                />
-                <path
-                  className="st10"
-                  d="M398.3,333.4c0,0,0.1,0,0.1,0s0.1,0,0.1,0.1l2.6,3.5c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.8,0.6
+              />
+              <path
+                className="st10"
+                d="M398.3,333.4c0,0,0.1,0,0.1,0s0.1,0,0.1,0.1l2.6,3.5c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.8,0.6
       c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.1-0.1l-0.8-1.1l-3.5,2.6c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.1-0.1l-0.7-0.9c0,0,0-0.1,0-0.1
       c0-0.1,0-0.1,0.1-0.1l3.5-2.6l-0.8-1.1c0,0,0-0.1,0-0.1s0-0.1,0.1-0.1L398.3,333.4z"
-                />
-                <path
-                  className="st10"
-                  d="M401.7,338c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.7,0.9c0,0,0,0.1,0,0.1c0,0.1,0,0.1-0.1,0.1l-4.5,3.3
+              />
+              <path
+                className="st10"
+                d="M401.7,338c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.7,0.9c0,0,0,0.1,0,0.1c0,0.1,0,0.1-0.1,0.1l-4.5,3.3
       c-0.1,0.1-0.2,0.1-0.3-0.1l-0.7-0.9c-0.1-0.1-0.1-0.2,0-0.2L401.7,338z"
-                />
-                <path
-                  className="st10"
-                  d="M400.9,341.7c0.2-0.2,0.5-0.3,0.7-0.4c0.3-0.1,0.5-0.2,0.8-0.2c0.3,0,0.5,0,0.8,0c0.3,0,0.5,0.1,0.8,0.2
+              />
+              <path
+                className="st10"
+                d="M400.9,341.7c0.2-0.2,0.5-0.3,0.7-0.4c0.3-0.1,0.5-0.2,0.8-0.2c0.3,0,0.5,0,0.8,0c0.3,0,0.5,0.1,0.8,0.2
       c0.2,0.1,0.5,0.2,0.7,0.4c0.2,0.2,0.4,0.4,0.6,0.6c0.2,0.2,0.3,0.5,0.4,0.7c0.1,0.3,0.2,0.5,0.2,0.8c0,0.3,0,0.5,0,0.8
       c0,0.3-0.1,0.5-0.2,0.8c-0.1,0.2-0.2,0.5-0.4,0.7c-0.2,0.2-0.4,0.4-0.6,0.6s-0.5,0.3-0.7,0.4c-0.3,0.1-0.5,0.2-0.8,0.2
       c-0.3,0-0.5,0-0.8,0c-0.3,0-0.5-0.1-0.8-0.2s-0.5-0.2-0.7-0.4c-0.2-0.2-0.4-0.4-0.6-0.6c-0.2-0.2-0.3-0.5-0.4-0.7
@@ -556,94 +550,94 @@ export default function NewWheel({
       c0.2,0.1,0.4,0.2,0.6,0.2c0.2,0,0.4,0,0.6,0c0.2-0.1,0.4-0.1,0.6-0.3c0.2-0.1,0.3-0.3,0.4-0.5c0.1-0.2,0.2-0.4,0.2-0.6
       s0-0.4,0-0.6c0-0.2-0.1-0.4-0.3-0.6c-0.1-0.2-0.3-0.3-0.5-0.4c-0.2-0.1-0.4-0.2-0.6-0.2c-0.2,0-0.4,0-0.6,0
       C402.2,342.7,402,342.8,401.9,343z"
-                />
-                <path
-                  className="st10"
-                  d="M407.4,345.8c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.8,1.1c0,0,0,0.1,0,0.1s0,0.1,0,0.1
+              />
+              <path
+                className="st10"
+                d="M407.4,345.8c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.8,1.1c0,0,0,0.1,0,0.1s0,0.1,0,0.1
       c-0.2,0.6-0.5,1.2-0.7,1.8c-0.2,0.6-0.5,1.2-0.7,1.8l2.6-1.9c0,0,0.1,0,0.1,0s0.1,0,0.1,0.1l0.7,0.9c0,0,0,0.1,0,0.1
       c0,0,0,0.1-0.1,0.1l-4.5,3.3c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1-0.1l-0.8-1c0,0,0-0.1,0-0.1s0-0.1,0-0.1c0.3-0.6,0.5-1.3,0.8-1.9
       c0.3-0.6,0.5-1.2,0.8-1.9l-2.8,2c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1-0.1l-0.7-0.9c0,0,0-0.1,0-0.1s0-0.1,0.1-0.1L407.4,345.8z"
-                />
-              </g>
+              />
+            </g>
+            <g>
+              <path
+                className="st6"
+                d="M374,292.7c-2.6-3.5-7.5-4.3-11-1.7c-3.5,2.6-4.3,7.5-1.7,11c2.6,3.5,7.5,4.3,11,1.7
+      C375.8,301.1,376.6,296.2,374,292.7z"
+              />
               <g>
                 <path
-                  className="st6"
-                  d="M374,292.7c-2.6-3.5-7.5-4.3-11-1.7c-3.5,2.6-4.3,7.5-1.7,11c2.6,3.5,7.5,4.3,11,1.7
-      C375.8,301.1,376.6,296.2,374,292.7z"
-                />
-                <g>
-                  <path
-                    className="st11"
-                    d="M366.8,301.9l-3.8-5.1l1.4-1l1.7,0.4l2.3,0.6c1.3,0.4,1.7,0.2,2.1-0.1c0.7-0.5,0.5-1.2,0.1-1.7
+                  className="st11"
+                  d="M366.8,301.9l-3.8-5.1l1.4-1l1.7,0.4l2.3,0.6c1.3,0.4,1.7,0.2,2.1-0.1c0.7-0.5,0.5-1.2,0.1-1.7
         c-0.6-0.8-1.8-0.4-1.9-0.3l-0.7-1.8c0.9-0.3,2.8-0.5,4,1.1c1.3,1.8,0.7,3.4-0.3,4.2c-1,0.7-2.3,0.6-3.7,0.3
         c-0.5-0.2-1.3-0.4-2.1-0.6l2.2,3L366.8,301.9z"
-                  />
-                </g>
+                />
               </g>
             </g>
-            <g
-              id="group3"
-              style={clickCSS(3, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 3, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.mindset);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-            >
+          </g>
+          <g
+            id="group3"
+            style={clickCSS(3, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 3, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.mindset);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+          >
+            <g>
+              <path
+                className="st6"
+                d="M386.3,451.8c-1.5,4.1,0.7,8.6,4.8,10.1c4.1,1.5,8.6-0.7,10.1-4.8c1.5-4.1-0.7-8.6-4.8-10.1
+      C392.2,445.5,387.7,447.7,386.3,451.8z"
+              />
               <g>
                 <path
-                  className="st6"
-                  d="M386.3,451.8c-1.5,4.1,0.7,8.6,4.8,10.1c4.1,1.5,8.6-0.7,10.1-4.8c1.5-4.1-0.7-8.6-4.8-10.1
-      C392.2,445.5,387.7,447.7,386.3,451.8z"
-                />
-                <g>
-                  <path
-                    className="st11"
-                    d="M394.3,453c0.4-0.4,1-0.8,2-0.5c0.3,0.1,0.8,0.3,1.1,0.9c0.5,0.8,0.3,1.8,0.1,2.4c-0.6,1.7-2.2,1.9-3,1.9
+                  className="st11"
+                  d="M394.3,453c0.4-0.4,1-0.8,2-0.5c0.3,0.1,0.8,0.3,1.1,0.9c0.5,0.8,0.3,1.8,0.1,2.4c-0.6,1.7-2.2,1.9-3,1.9
         l0.1-1.5c0.1,0,1.3,0.1,1.6-0.8c0.2-0.7,0-1.2-0.4-1.3c-0.9-0.3-1.2,0.2-1.7,1.4l-1.2-0.4c0.4-1.2,0.5-1.9-0.3-2.1
         c-0.4-0.1-0.9,0.1-1.1,0.8c-0.3,1,0.5,1.5,0.7,1.6l-0.9,1.2c-0.6-0.5-1.7-1.6-1.1-3.3c0.7-1.9,2-2.2,3-1.8
         C394,451.7,394.2,452.4,394.3,453z"
-                  />
-                </g>
+                />
               </g>
-              <g>
-                <path
-                  className="st10"
-                  d="M395.4,440.8C395.4,440.8,395.4,440.8,395.4,440.8c-0.1-0.1-0.1-0.2-0.1-0.2l0.5-1.3
+            </g>
+            <g>
+              <path
+                className="st10"
+                d="M395.4,440.8C395.4,440.8,395.4,440.8,395.4,440.8c-0.1-0.1-0.1-0.2-0.1-0.2l0.5-1.3
       c0-0.1,0.1-0.1,0.2-0.1l3.8,0.2l-3.1-2.3c-0.1-0.1-0.1-0.2-0.1-0.2l0.5-1.3c0,0,0-0.1,0.1-0.1c0,0,0.1,0,0.1,0
       c0.9,0.2,1.8,0.4,2.7,0.7s1.8,0.4,2.7,0.7l0,0c0.1,0,0.1,0.1,0.1,0.2l-0.4,1.1c0,0.1-0.1,0.2-0.2,0.1l-3-0.7l2.6,1.9
       c0,0,0,0,0.1,0.1c0,0,0,0.1,0,0.1l-0.4,1c0,0,0,0.1-0.1,0.1c0,0-0.1,0-0.1,0l-3.2-0.2l2.8,1.4c0.1,0,0.1,0.1,0.1,0.2l-0.4,1.1
       c0,0.1-0.1,0.1-0.2,0.1L395.4,440.8z"
-                />
-                <path
-                  className="st10"
-                  d="M397.9,433.9c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.4-1.1c0,0,0-0.1,0.1-0.1c0,0,0.1,0,0.1,0l5.3,1.9
+              />
+              <path
+                className="st10"
+                d="M397.9,433.9c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.4-1.1c0,0,0-0.1,0.1-0.1c0,0,0.1,0,0.1,0l5.3,1.9
       c0.1,0,0.1,0.1,0.1,0.2l-0.4,1.1c0,0.1-0.1,0.1-0.2,0.1L397.9,433.9z"
-                />
-                <path
-                  className="st10"
-                  d="M398.9,431.2c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.4-1.2c0,0,0-0.1,0.1-0.1c0,0,0.1-0.1,0.1-0.1
+              />
+              <path
+                className="st10"
+                d="M398.9,431.2c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.4-1.2c0,0,0-0.1,0.1-0.1c0,0,0.1-0.1,0.1-0.1
       c0.6-0.1,1.2-0.3,1.9-0.4c0.6-0.1,1.2-0.3,1.9-0.4l-3-1.1c0,0-0.1-0.1-0.1-0.1c0,0,0-0.1,0-0.1l0.4-1.1c0-0.1,0-0.1,0.1-0.1
       c0,0,0.1,0,0.1,0l5.3,1.9c0.1,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.1l-0.4,1.2c0,0,0,0.1-0.1,0.1s-0.1,0-0.1,0c-0.7,0.1-1.3,0.3-2,0.4
       c-0.7,0.1-1.3,0.3-2,0.4l3.2,1.2c0.1,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.2l-0.4,1.1c0,0.1-0.1,0.1-0.1,0.1c0,0-0.1,0-0.1,0
       L398.9,431.2z"
-                />
-                <path
-                  className="st10"
-                  d="M405.4,421.1c0.3,0.1,0.5,0.2,0.7,0.4c0.2,0.2,0.4,0.3,0.6,0.5c0.2,0.2,0.3,0.4,0.4,0.7s0.2,0.5,0.2,0.7
+              />
+              <path
+                className="st10"
+                d="M405.4,421.1c0.3,0.1,0.5,0.2,0.7,0.4c0.2,0.2,0.4,0.3,0.6,0.5c0.2,0.2,0.3,0.4,0.4,0.7s0.2,0.5,0.2,0.7
       c0,0.3,0.1,0.5,0,0.8c0,0.3-0.1,0.5-0.2,0.8l-0.7,1.9c0,0,0,0.1-0.1,0.1c0,0-0.1,0-0.1,0l-5.3-1.9c-0.1,0-0.1,0-0.1-0.1
       c0,0,0-0.1,0-0.1l0.7-1.9c0.1-0.3,0.2-0.5,0.4-0.7s0.3-0.4,0.5-0.6c0.2-0.2,0.4-0.3,0.6-0.4s0.5-0.2,0.7-0.2
       c0.3,0,0.5-0.1,0.8,0C404.9,421,405.2,421,405.4,421.1z M402.7,424l2.9,1l0.1-0.3c0-0.1,0-0.1,0.1-0.2c0-0.1,0-0.1,0-0.2
       c0.1-0.2,0.1-0.4,0.1-0.6s-0.1-0.4-0.1-0.5c-0.1-0.2-0.2-0.3-0.3-0.4c-0.1-0.1-0.3-0.2-0.5-0.3c-0.2-0.1-0.4-0.1-0.6-0.1
       c-0.2,0-0.4,0.1-0.6,0.2c-0.2,0.1-0.3,0.2-0.5,0.4c-0.1,0.2-0.2,0.3-0.3,0.5L402.7,424z"
-                />
-                <path
-                  className="st10"
-                  d="M406.9,420c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2-0.1,0.3-0.2c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.2-0.2,0.2-0.4
+              />
+              <path
+                className="st10"
+                d="M406.9,420c0,0,0.1-0.1,0.2-0.1c0.1,0,0.2-0.1,0.3-0.2c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.2-0.2,0.2-0.4
       c0-0.1,0.1-0.2,0.1-0.3c0-0.1,0-0.2,0-0.2c0-0.1-0.1-0.1-0.1-0.2c-0.1,0-0.1-0.1-0.2-0.1c-0.1,0-0.2,0-0.2,0s-0.2,0.1-0.2,0.2
       c-0.1,0.1-0.2,0.1-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.2c-0.2,0.3-0.4,0.5-0.6,0.7c-0.2,0.2-0.4,0.3-0.6,0.4
       c-0.2,0.1-0.4,0.2-0.6,0.2c-0.2,0-0.4,0-0.6-0.1c-0.2-0.1-0.4-0.2-0.6-0.4c-0.2-0.2-0.3-0.4-0.3-0.6c-0.1-0.2-0.1-0.5-0.1-0.7
@@ -656,62 +650,62 @@ export default function NewWheel({
       c-0.1,0.3-0.3,0.6-0.5,0.8c-0.2,0.2-0.4,0.5-0.7,0.6c-0.1,0.1-0.2,0.1-0.3,0.2c-0.1,0-0.2,0.1-0.2,0.1l0,0c0,0,0,0,0,0
       c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c-0.1,0-0.1,0-0.2,0c0,0-0.1-0.1-0.1-0.1l-0.4-0.9c0-0.1,0-0.1,0-0.1c0,0,0,0,0-0.1
       C406.8,420.1,406.9,420,406.9,420z"
-                />
-                <path
-                  className="st10"
-                  d="M404.8,414.5c-0.1,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l1.3-3.7c0-0.1,0.1-0.1,0.1-0.1s0.1,0,0.1,0l0.9,0.3
+              />
+              <path
+                className="st10"
+                d="M404.8,414.5c-0.1,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l1.3-3.7c0-0.1,0.1-0.1,0.1-0.1s0.1,0,0.1,0l0.9,0.3
       c0,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.2l-0.9,2.4l0.9,0.3l0.7-1.9c0,0,0-0.1,0.1-0.1c0,0,0.1,0,0.1,0l0.8,0.3c0,0,0.1,0,0.1,0.1
       s0,0.1,0,0.1l-0.7,1.9l1,0.3l0.9-2.5c0-0.1,0.1-0.1,0.2-0.1l0.9,0.3c0,0,0,0,0.1,0.1c0.1,0,0.1,0.1,0,0.2l-1.4,3.8
       c0,0.1,0,0.1-0.1,0.1c0,0-0.1,0-0.1,0L404.8,414.5z"
-                />
-                <path
-                  className="st10"
-                  d="M406.5,409.7c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l1.4-4.1c0,0,0-0.1,0.1-0.1c0,0,0.1,0,0.1,0l0.9,0.3
+              />
+              <path
+                className="st10"
+                d="M406.5,409.7c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l1.4-4.1c0,0,0-0.1,0.1-0.1c0,0,0.1,0,0.1,0l0.9,0.3
       c0,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.2l-0.5,1.3l4.1,1.5c0,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.1l-0.4,1.1c0,0,0,0.1-0.1,0.1
       c0,0-0.1,0-0.1,0l-4.1-1.5l-0.5,1.3c0,0,0,0.1-0.1,0.1c0,0-0.1,0-0.2,0L406.5,409.7z"
-                />
-              </g>
-            </g>
-            <g
-              id="group5"
-              style={clickCSS(5, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 5, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.movement);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-            >
-              <ellipse
-                transform="matrix(0.7822 -0.6231 0.6231 0.7822 -231.3844 231.0296)"
-                className="st6"
-                cx="214.7"
-                cy="446.4"
-                rx="7.9"
-                ry="7.9"
               />
-              <g>
-                <path
-                  className="st11"
-                  d="M215.6,449.9c-1.4,1.2-3.2,0.8-4.4-0.6c-1.1-1.3-1.2-2.5-1-3.5l1.8,0c0,0-0.4,1.4,0.4,2.5
+            </g>
+          </g>
+          <g
+            id="group5"
+            style={clickCSS(5, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 5, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.movement);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+          >
+            <ellipse
+              transform="matrix(0.7822 -0.6231 0.6231 0.7822 -231.3844 231.0296)"
+              className="st6"
+              cx="214.7"
+              cy="446.4"
+              rx="7.9"
+              ry="7.9"
+            />
+            <g>
+              <path
+                className="st11"
+                d="M215.6,449.9c-1.4,1.2-3.2,0.8-4.4-0.6c-1.1-1.3-1.2-2.5-1-3.5l1.8,0c0,0-0.4,1.4,0.4,2.5
       c0.4,0.5,1.2,0.8,1.9,0.2c0.8-0.6,0.9-1.4,0.4-2.1c-0.6-0.8-1.3-0.8-1.7-0.9l-0.3-1.6l3.9-2.2l3.2,3.9l-1.3,1.1l-2.2-2.7
       l-1.3,0.8c0.4,0.1,0.7,0.4,1,0.7C217.2,447,217.1,448.6,215.6,449.9z"
-                />
-              </g>
-              <g>
-                <path
-                  className="st10"
-                  d="M225,453.9c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.9,1.1c0.1,0.1,0.1,0.2,0,0.2l-2.1,3.2l3.5-1.5
+              />
+            </g>
+            <g>
+              <path
+                className="st10"
+                d="M225,453.9c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.9,1.1c0.1,0.1,0.1,0.2,0,0.2l-2.1,3.2l3.5-1.5
       c0.1,0,0.2,0,0.2,0.1l0.9,1c0,0,0,0.1,0,0.1s0,0.1-0.1,0.1c-0.7,0.7-1.3,1.3-2,2c-0.6,0.7-1.3,1.3-2,2l0,0
       c-0.1,0.1-0.2,0.1-0.2,0l-0.7-0.9c-0.1-0.1-0.1-0.2,0-0.3l2.1-2.3l-3,1.3c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0l-0.7-0.8
       c0,0,0-0.1,0-0.1c0-0.1,0-0.1,0-0.1l1.8-2.7l-2.6,1.7c-0.1,0.1-0.2,0.1-0.3,0l-0.7-0.9c-0.1-0.1-0.1-0.2,0-0.2L225,453.9z"
-                />
-                <path
-                  className="st10"
-                  d="M227.5,461.1c0.2-0.2,0.4-0.3,0.7-0.4c0.2-0.1,0.5-0.2,0.8-0.2c0.3,0,0.5-0.1,0.8,0c0.3,0,0.5,0.1,0.8,0.2
+              />
+              <path
+                className="st10"
+                d="M227.5,461.1c0.2-0.2,0.4-0.3,0.7-0.4c0.2-0.1,0.5-0.2,0.8-0.2c0.3,0,0.5-0.1,0.8,0c0.3,0,0.5,0.1,0.8,0.2
       s0.5,0.2,0.7,0.4c0.2,0.2,0.4,0.3,0.6,0.6c0.2,0.2,0.3,0.4,0.4,0.7c0.1,0.2,0.2,0.5,0.2,0.8c0,0.3,0.1,0.5,0,0.8
       c0,0.3-0.1,0.5-0.2,0.8c-0.1,0.2-0.2,0.5-0.4,0.7c-0.2,0.2-0.3,0.4-0.6,0.6c-0.2,0.2-0.4,0.3-0.7,0.4c-0.2,0.1-0.5,0.2-0.8,0.2
       c-0.3,0-0.5,0.1-0.8,0c-0.3,0-0.5-0.1-0.8-0.2c-0.2-0.1-0.5-0.2-0.7-0.4c-0.2-0.2-0.4-0.3-0.6-0.6c-0.2-0.2-0.3-0.4-0.4-0.7
@@ -720,73 +714,73 @@ export default function NewWheel({
       c0.1,0.2,0.2,0.4,0.3,0.5c0.1,0.2,0.3,0.3,0.5,0.4c0.2,0.1,0.4,0.1,0.6,0.2c0.2,0,0.4,0,0.6-0.1c0.2-0.1,0.4-0.2,0.5-0.3
       c0.2-0.1,0.3-0.3,0.4-0.5c0.1-0.2,0.2-0.4,0.2-0.6c0-0.2,0-0.4,0-0.6c-0.1-0.2-0.2-0.4-0.3-0.5c-0.1-0.2-0.3-0.3-0.5-0.4
       c-0.2-0.1-0.4-0.1-0.6-0.1c-0.2,0-0.4,0-0.6,0.1C228.8,462,228.6,462.1,228.5,462.3z"
-                />
-                <path
-                  className="st10"
-                  d="M230.6,469.3c0-0.1,0-0.1,0.1-0.2c0-0.1,0-0.1,0.1-0.2l2.8-5c0,0,0,0,0,0s0,0,0,0c0.1,0,0.1,0,0.2,0l0.8,1
+              />
+              <path
+                className="st10"
+                d="M230.6,469.3c0-0.1,0-0.1,0.1-0.2c0-0.1,0-0.1,0.1-0.2l2.8-5c0,0,0,0,0,0s0,0,0,0c0.1,0,0.1,0,0.2,0l0.8,1
       c0.1,0.1,0.1,0.2,0,0.3l-2,3.3c0.3-0.1,0.6-0.2,0.9-0.3c0.3-0.1,0.6-0.2,0.9-0.4c0.3-0.1,0.6-0.2,0.9-0.4s0.6-0.2,0.9-0.3
       c0.1,0,0.2,0,0.3,0.1l0.8,1c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0,0.1c0,0,0,0,0,0l0,0l-5.4,1.9c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0
       c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1-0.1l-0.6-0.8C230.6,469.4,230.6,469.4,230.6,469.3z"
-                />
-                <path
-                  className="st10"
-                  d="M237.7,468.9c0,0,0.1-0.1,0.1-0.1c0,0,0.1,0,0.1,0.1l2.6,3c0,0,0.1,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.8,0.6
+              />
+              <path
+                className="st10"
+                d="M237.7,468.9c0,0,0.1-0.1,0.1-0.1c0,0,0.1,0,0.1,0.1l2.6,3c0,0,0.1,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.8,0.6
       c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.1-0.1l-1.7-2l-0.8,0.6l1.3,1.5c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1-0.1,0.1l-0.7,0.6
       c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1-0.1l-1.3-1.5l-0.8,0.7l1.7,2.1c0.1,0.1,0.1,0.2,0,0.3l-0.8,0.6c0,0,0,0-0.1,0
       c-0.1,0-0.1,0-0.2-0.1l-2.6-3.1c0,0-0.1-0.1,0-0.1c0,0,0-0.1,0.1-0.1L237.7,468.9z"
-                />
-                <path
-                  className="st10"
-                  d="M241.4,473.3c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.9,1.1c0.1,0.1,0.1,0.2,0,0.2l-2.1,3.2l3.5-1.5
+              />
+              <path
+                className="st10"
+                d="M241.4,473.3c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.9,1.1c0.1,0.1,0.1,0.2,0,0.2l-2.1,3.2l3.5-1.5
       c0.1,0,0.2,0,0.2,0.1l0.9,1c0,0,0,0.1,0,0.1s0,0.1-0.1,0.1c-0.7,0.7-1.3,1.3-2,2s-1.3,1.3-2,2l0,0c-0.1,0.1-0.2,0.1-0.2,0
       l-0.7-0.9c-0.1-0.1-0.1-0.2,0-0.3l2.1-2.3l-3,1.3c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0l-0.7-0.8c0,0,0-0.1,0-0.1c0-0.1,0-0.1,0-0.1
       l1.8-2.7l-2.6,1.7c-0.1,0.1-0.2,0.1-0.3,0l-0.7-0.9c-0.1-0.1-0.1-0.2,0-0.2L241.4,473.3z"
-                />
-                <path
-                  className="st10"
-                  d="M246.1,478.9c0,0,0.1-0.1,0.1-0.1s0.1,0,0.1,0.1l2.6,3c0,0,0.1,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.8,0.6
+              />
+              <path
+                className="st10"
+                d="M246.1,478.9c0,0,0.1-0.1,0.1-0.1s0.1,0,0.1,0.1l2.6,3c0,0,0.1,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.8,0.6
       c0,0-0.1,0-0.1,0s-0.1,0-0.1-0.1l-1.7-2l-0.8,0.6l1.3,1.5c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1-0.1,0.1l-0.7,0.6c0,0-0.1,0-0.1,0
       c0,0-0.1,0-0.1-0.1l-1.3-1.5l-0.8,0.7l1.7,2.1c0.1,0.1,0.1,0.2,0,0.3l-0.8,0.6c0,0,0,0-0.1,0c-0.1,0-0.1,0-0.2-0.1l-2.6-3.1
       c0,0-0.1-0.1,0-0.1c0,0,0-0.1,0.1-0.1L246.1,478.9z"
-                />
-                <path
-                  className="st10"
-                  d="M249.6,483c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.8,1c0,0,0,0.1,0.1,0.1c0,0,0,0.1,0,0.1
+              />
+              <path
+                className="st10"
+                d="M249.6,483c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.8,1c0,0,0,0.1,0.1,0.1c0,0,0,0.1,0,0.1
       c-0.2,0.6-0.4,1.2-0.6,1.8c-0.2,0.6-0.4,1.2-0.6,1.8l2.4-2.1c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l0.7,0.9c0,0,0.1,0.1,0.1,0.1
       c0,0,0,0.1-0.1,0.1l-4.3,3.6c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1-0.1l-0.8-1c0,0,0-0.1,0-0.1c0,0,0-0.1,0-0.1
       c0.2-0.7,0.4-1.3,0.7-1.9s0.4-1.3,0.6-1.9l-2.6,2.2c0,0-0.1,0.1-0.1,0.1c0,0-0.1,0-0.1-0.1l-0.7-0.9c0,0-0.1-0.1,0-0.1
       s0-0.1,0.1-0.1L249.6,483z"
-                />
-                <path
-                  className="st10"
-                  d="M253.6,487.8c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l2.8,3.3c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.8,0.6
+              />
+              <path
+                className="st10"
+                d="M253.6,487.8c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1l2.8,3.3c0,0,0,0.1,0,0.1c0,0,0,0.1-0.1,0.1l-0.8,0.6
       c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.1-0.1l-0.9-1.1l-3.3,2.8c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.1-0.1l-0.8-0.9c0,0,0-0.1,0-0.1
       c0-0.1,0-0.1,0.1-0.1l3.3-2.8l-0.9-1.1c0,0-0.1-0.1,0-0.1c0,0,0-0.1,0.1-0.1L253.6,487.8z"
-                />
-              </g>
-            </g>
-            <g
-              id="group6"
-              style={clickCSS(6, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 6, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.surroundings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-            >
-              <path
-                className="st6"
-                d="M188.7,397.7c-0.9,4.3,1.8,8.5,6,9.4c4.3,0.9,8.5-1.8,9.4-6c0.9-4.3-1.8-8.5-6-9.4
-    C193.8,390.8,189.6,393.5,188.7,397.7z"
               />
-              <g>
-                <path
-                  className="st10"
-                  d="M200.7,389.4c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.2-0.1,0.2-0.2c0.1-0.1,0.2-0.2,0.3-0.3
+            </g>
+          </g>
+          <g
+            id="group6"
+            style={clickCSS(6, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 6, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.surroundings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+          >
+            <path
+              className="st6"
+              d="M188.7,397.7c-0.9,4.3,1.8,8.5,6,9.4c4.3,0.9,8.5-1.8,9.4-6c0.9-4.3-1.8-8.5-6-9.4
+    C193.8,390.8,189.6,393.5,188.7,397.7z"
+            />
+            <g>
+              <path
+                className="st10"
+                d="M200.7,389.4c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.2-0.1,0.2-0.2c0.1-0.1,0.2-0.2,0.3-0.3
       c0.1-0.1,0.1-0.3,0.2-0.4c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2-0.1-0.2s-0.1-0.1-0.1-0.1c-0.1,0-0.1-0.1-0.2-0.1c-0.1,0-0.2,0-0.2,0
       c-0.1,0-0.2,0.1-0.2,0.2c-0.1,0.1-0.1,0.2-0.2,0.3c-0.1,0.1-0.1,0.2-0.1,0.2c-0.2,0.3-0.4,0.5-0.5,0.7c-0.2,0.2-0.4,0.4-0.5,0.5
       c-0.2,0.1-0.4,0.2-0.6,0.2c-0.2,0-0.4,0-0.6,0c-0.2-0.1-0.5-0.1-0.6-0.3c-0.2-0.1-0.3-0.3-0.4-0.5c-0.1-0.2-0.2-0.5-0.2-0.7
@@ -799,18 +793,18 @@ export default function NewWheel({
       c-0.1,0.3-0.2,0.6-0.4,0.8s-0.4,0.5-0.6,0.7c-0.1,0.1-0.2,0.2-0.3,0.2c-0.1,0.1-0.2,0.1-0.2,0.1l0,0c0,0,0,0,0,0c0,0,0,0,0,0
       c0,0,0,0,0,0c0,0,0,0,0,0c-0.1,0-0.1,0.1-0.2,0.1c0,0-0.1-0.1-0.1-0.1l-0.5-0.8c0-0.1,0-0.1,0-0.1
       C200.6,389.5,200.6,389.5,200.7,389.4C200.7,389.4,200.7,389.4,200.7,389.4z"
-                />
-                <path
-                  className="st10"
-                  d="M201.6,383.4c0.2,0,0.4,0.1,0.5,0c0.1,0,0.3-0.1,0.4-0.1c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.2,0.1-0.3
+              />
+              <path
+                className="st10"
+                d="M201.6,383.4c0.2,0,0.4,0.1,0.5,0c0.1,0,0.3-0.1,0.4-0.1c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.2,0.1-0.3
       c0-0.1,0-0.3,0-0.4c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.3-0.1-0.4-0.2l-3.3-0.7c0,0-0.1,0-0.1-0.1
       c0,0,0-0.1,0-0.1l0.2-1.1c0-0.1,0-0.1,0.1-0.1c0,0,0.1,0,0.1,0l3.3,0.7c0.5,0.1,0.8,0.2,1.1,0.4c0.3,0.2,0.5,0.4,0.6,0.7
       c0.1,0.3,0.2,0.6,0.2,0.9c0,0.3,0,0.6-0.1,1c-0.1,0.3-0.2,0.6-0.3,0.9c-0.1,0.3-0.3,0.5-0.6,0.7s-0.5,0.3-0.9,0.4
       s-0.7,0.1-1.2,0l-3.3-0.7c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.3-1.2c0,0,0-0.1,0.1-0.1c0,0,0.1,0,0.1,0L201.6,383.4z"
-                />
-                <path
-                  className="st10"
-                  d="M199.2,378.1c-0.1,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.5-2.5c0.1-0.3,0.2-0.5,0.3-0.7
+              />
+              <path
+                className="st10"
+                d="M199.2,378.1c-0.1,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.5-2.5c0.1-0.3,0.2-0.5,0.3-0.7
       c0.2-0.2,0.3-0.4,0.5-0.5c0.2-0.1,0.4-0.2,0.7-0.3c0.3-0.1,0.5,0,0.8,0c0.2,0,0.3,0.1,0.5,0.2c0.1,0.1,0.3,0.2,0.4,0.3
       c0.1,0.1,0.2,0.2,0.3,0.4c0.1,0.1,0.2,0.3,0.2,0.5l2.1-0.6c0,0,0.1,0,0.1,0c0.1,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1
       c0,0,0,0.1,0,0.1l-0.3,1.3c0,0,0,0.1-0.1,0.1s-0.1,0-0.1,0l-2,0.6l-0.1,0.6l1.8,0.4c0.1,0,0.2,0.1,0.1,0.2l-0.3,1.2
@@ -818,20 +812,20 @@ export default function NewWheel({
       c-0.1,0-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.1-0.1,0.2c0,0.1,0,0.1-0.1,0.2c0,0.1,0,0.1-0.1,0.2l-0.1,0.5l1.4,0.3l0.2-0.7
       c0,0,0-0.1,0-0.1s0-0.1,0-0.1c0-0.1,0-0.2,0-0.3s-0.1-0.2-0.1-0.2c-0.1-0.1-0.1-0.1-0.2-0.2
       C201.8,375.5,201.7,375.4,201.6,375.4z"
-                />
-                <path
-                  className="st10"
-                  d="M200.4,372.6c-0.1,0-0.1,0-0.1-0.1s0-0.1,0-0.1l0.5-2.5c0.1-0.3,0.2-0.5,0.3-0.7c0.2-0.2,0.3-0.4,0.5-0.5
+              />
+              <path
+                className="st10"
+                d="M200.4,372.6c-0.1,0-0.1,0-0.1-0.1s0-0.1,0-0.1l0.5-2.5c0.1-0.3,0.2-0.5,0.3-0.7c0.2-0.2,0.3-0.4,0.5-0.5
       s0.4-0.2,0.7-0.3s0.5,0,0.8,0c0.2,0,0.3,0.1,0.5,0.2c0.1,0.1,0.3,0.2,0.4,0.3c0.1,0.1,0.2,0.2,0.3,0.4c0.1,0.1,0.2,0.3,0.2,0.5
       l2.1-0.6c0,0,0.1,0,0.1,0c0.1,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.1l-0.3,1.3c0,0,0,0.1-0.1,0.1c0,0-0.1,0-0.1,0
       l-2,0.6l-0.1,0.6l1.8,0.4c0.1,0,0.2,0.1,0.1,0.2l-0.3,1.2c0,0.1,0,0.1-0.1,0.1c0,0-0.1,0-0.1,0L200.4,372.6z M202.8,369.9
       c-0.1,0-0.2,0-0.2,0c-0.1,0-0.2,0-0.2,0.1c-0.1,0-0.1,0.1-0.2,0.2c-0.1,0.1-0.1,0.1-0.1,0.2c0,0.1,0,0.1-0.1,0.2
       c0,0.1,0,0.1-0.1,0.2l-0.1,0.5l1.4,0.3l0.2-0.7c0,0,0-0.1,0-0.1s0-0.1,0-0.1c0-0.1,0-0.2,0-0.3c0-0.1-0.1-0.2-0.1-0.2
       c-0.1-0.1-0.1-0.1-0.2-0.2C203,370,202.9,369.9,202.8,369.9z"
-                />
-                <path
-                  className="st10"
-                  d="M204.3,368c-0.3-0.1-0.5-0.2-0.8-0.3c-0.2-0.1-0.5-0.3-0.6-0.5c-0.2-0.2-0.4-0.4-0.5-0.6
+              />
+              <path
+                className="st10"
+                d="M204.3,368c-0.3-0.1-0.5-0.2-0.8-0.3c-0.2-0.1-0.5-0.3-0.6-0.5c-0.2-0.2-0.4-0.4-0.5-0.6
       c-0.1-0.2-0.3-0.5-0.3-0.7c-0.1-0.2-0.1-0.5-0.1-0.8c0-0.3,0-0.5,0.1-0.8c0.1-0.3,0.2-0.5,0.3-0.8c0.1-0.2,0.3-0.5,0.5-0.7
       c0.2-0.2,0.4-0.4,0.6-0.5c0.2-0.1,0.5-0.3,0.7-0.3c0.2-0.1,0.5-0.1,0.8-0.1c0.3,0,0.5,0,0.8,0.1c0.3,0.1,0.5,0.2,0.8,0.3
       c0.2,0.1,0.5,0.3,0.6,0.5c0.2,0.2,0.4,0.4,0.5,0.6c0.1,0.2,0.3,0.5,0.3,0.7c0.1,0.3,0.1,0.5,0.1,0.8c0,0.3,0,0.5-0.1,0.8
@@ -840,48 +834,48 @@ export default function NewWheel({
       c0.2-0.1,0.3-0.2,0.4-0.4c0.1-0.2,0.2-0.4,0.2-0.6c0-0.2,0-0.4,0-0.6c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.2-0.3-0.3-0.4-0.4
       c-0.2-0.1-0.4-0.2-0.6-0.2c-0.2,0-0.4-0.1-0.6,0c-0.2,0-0.4,0.1-0.6,0.2c-0.2,0.1-0.3,0.2-0.4,0.4c-0.1,0.2-0.2,0.4-0.2,0.6
       c0,0.2,0,0.4,0,0.6c0,0.2,0.1,0.4,0.2,0.5s0.3,0.3,0.4,0.4C204.2,366.3,204.4,366.4,204.6,366.5z"
-                />
-                <path
-                  className="st10"
-                  d="M206.7,359.7c0.2,0,0.4,0.1,0.5,0c0.1,0,0.3-0.1,0.4-0.1c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.2,0.1-0.4
+              />
+              <path
+                className="st10"
+                d="M206.7,359.7c0.2,0,0.4,0.1,0.5,0c0.1,0,0.3-0.1,0.4-0.1c0.1-0.1,0.2-0.2,0.3-0.3c0.1-0.1,0.1-0.2,0.1-0.4
       c0-0.1,0-0.3,0-0.4c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.1-0.2-0.2-0.3-0.3c-0.1-0.1-0.3-0.1-0.4-0.2l-3.3-0.7c0,0-0.1,0-0.1-0.1
       c0,0,0-0.1,0-0.1l0.2-1.1c0-0.1,0-0.1,0.1-0.1c0,0,0.1,0,0.1,0l3.3,0.7c0.5,0.1,0.8,0.2,1.1,0.4c0.3,0.2,0.5,0.4,0.6,0.7
       s0.2,0.6,0.2,0.9c0,0.3,0,0.6-0.1,1s-0.2,0.6-0.3,0.9c-0.1,0.3-0.3,0.5-0.6,0.7c-0.2,0.2-0.5,0.3-0.9,0.4
       c-0.3,0.1-0.7,0.1-1.2,0l-3.3-0.7c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.3-1.2c0,0,0-0.1,0.1-0.1c0,0,0.1,0,0.1,0L206.7,359.7z"
-                />
-                <path
-                  className="st10"
-                  d="M204.4,354.4c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.3-1.3c0,0,0-0.1,0.1-0.1s0.1-0.1,0.1-0.1
+              />
+              <path
+                className="st10"
+                d="M204.4,354.4c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.3-1.3c0,0,0-0.1,0.1-0.1s0.1-0.1,0.1-0.1
       c0.6-0.2,1.2-0.4,1.8-0.6c0.6-0.2,1.2-0.4,1.8-0.6l-3.1-0.7c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.2-1.1c0-0.1,0-0.1,0.1-0.1
       c0,0,0.1,0,0.1,0l5.5,1.2c0.1,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.1l-0.3,1.2c0,0,0,0.1-0.1,0.1c0,0-0.1,0-0.1,0.1
       c-0.6,0.2-1.3,0.4-1.9,0.7c-0.6,0.2-1.3,0.4-1.9,0.7l3.4,0.7c0.1,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.1l-0.2,1.1c0,0.1,0,0.1-0.1,0.1
       c0,0-0.1,0-0.1,0L204.4,354.4z"
-                />
-                <path
-                  className="st10"
-                  d="M209.6,343.6c0.3,0.1,0.5,0.2,0.8,0.3s0.4,0.3,0.6,0.5c0.2,0.2,0.3,0.4,0.5,0.6c0.1,0.2,0.2,0.5,0.3,0.7
+              />
+              <path
+                className="st10"
+                d="M209.6,343.6c0.3,0.1,0.5,0.2,0.8,0.3s0.4,0.3,0.6,0.5c0.2,0.2,0.3,0.4,0.5,0.6c0.1,0.2,0.2,0.5,0.3,0.7
       c0.1,0.2,0.1,0.5,0.1,0.8c0,0.3,0,0.5-0.1,0.8l-0.4,1.9c0,0,0,0.1-0.1,0.1c0,0-0.1,0-0.1,0l-5.5-1.2c-0.1,0-0.1,0-0.1-0.1
       c0,0,0-0.1,0-0.1l0.4-1.9c0.1-0.3,0.2-0.5,0.3-0.8c0.1-0.2,0.3-0.5,0.4-0.6c0.2-0.2,0.4-0.4,0.6-0.5c0.2-0.1,0.4-0.3,0.7-0.3
       c0.2-0.1,0.5-0.1,0.8-0.1C209,343.5,209.3,343.5,209.6,343.6z M207.3,346.8l3,0.7l0.1-0.3c0-0.1,0-0.1,0-0.2c0-0.1,0-0.1,0-0.2
       c0-0.2,0-0.4,0-0.6c0-0.2-0.1-0.4-0.2-0.5c-0.1-0.2-0.2-0.3-0.4-0.4c-0.2-0.1-0.3-0.2-0.5-0.2c-0.2,0-0.4-0.1-0.6,0
       c-0.2,0-0.4,0.1-0.5,0.2c-0.2,0.1-0.3,0.3-0.4,0.4c-0.1,0.2-0.2,0.4-0.2,0.6L207.3,346.8z"
-                />
-                <path
-                  className="st10"
-                  d="M207.1,341.9c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.2-1.1c0,0,0-0.1,0.1-0.1c0,0,0.1-0.1,0.1,0l5.5,1.2
+              />
+              <path
+                className="st10"
+                d="M207.1,341.9c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.2-1.1c0,0,0-0.1,0.1-0.1c0,0,0.1-0.1,0.1,0l5.5,1.2
       c0.1,0,0.2,0.1,0.1,0.2l-0.2,1.1c0,0.1-0.1,0.2-0.2,0.1L207.1,341.9z"
-                />
-                <path
-                  className="st10"
-                  d="M207.7,339.1c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.3-1.3c0,0,0-0.1,0.1-0.1c0,0,0.1-0.1,0.1-0.1
+              />
+              <path
+                className="st10"
+                d="M207.7,339.1c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.3-1.3c0,0,0-0.1,0.1-0.1c0,0,0.1-0.1,0.1-0.1
       c0.6-0.2,1.2-0.4,1.8-0.6c0.6-0.2,1.2-0.4,1.8-0.6l-3.1-0.7c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.2-1.1c0-0.1,0-0.1,0.1-0.1
       c0,0,0.1,0,0.1,0l5.5,1.2c0.1,0,0.1,0,0.1,0.1c0,0,0,0.1,0,0.1l-0.3,1.2c0,0,0,0.1-0.1,0.1c0,0-0.1,0-0.1,0.1
       c-0.6,0.2-1.3,0.4-1.9,0.7c-0.6,0.2-1.3,0.4-1.9,0.7l3.4,0.7c0.1,0,0.1,0,0.1,0.1s0,0.1,0,0.1l-0.2,1.1c0,0.1,0,0.1-0.1,0.1
       c0,0-0.1,0-0.1,0L207.7,339.1z"
-                />
-                <path
-                  className="st10"
-                  d="M211.3,329.4c-0.1,0.1-0.2,0.2-0.3,0.4c-0.1,0.1-0.1,0.3-0.2,0.5c0,0.2,0,0.4,0,0.6s0.1,0.4,0.2,0.5
+              />
+              <path
+                className="st10"
+                d="M211.3,329.4c-0.1,0.1-0.2,0.2-0.3,0.4c-0.1,0.1-0.1,0.3-0.2,0.5c0,0.2,0,0.4,0,0.6s0.1,0.4,0.2,0.5
       c0.1,0.2,0.3,0.3,0.4,0.4c0.2,0.1,0.4,0.2,0.6,0.2s0.4,0.1,0.6,0c0.2,0,0.4-0.1,0.6-0.2c0.2-0.1,0.3-0.2,0.4-0.4
       c0.1-0.2,0.2-0.4,0.2-0.6c0-0.1,0-0.2,0-0.3s0-0.2,0-0.3l-1-0.2c0,0-0.1,0-0.1-0.1c0,0,0-0.1,0-0.1l0.2-1.1c0,0,0-0.1,0.1-0.1
       c0,0,0.1-0.1,0.1,0l1.9,0.4c0.1,0,0.1,0.1,0.1,0.2c0.1,0.1,0.1,0.3,0.1,0.5c0,0.2,0,0.3,0,0.5s0,0.3,0,0.5c0,0.2,0,0.3-0.1,0.5
@@ -889,10 +883,10 @@ export default function NewWheel({
       c-0.2,0.1-0.5,0.1-0.8,0.1c-0.3,0-0.5,0-0.8-0.1c-0.3-0.1-0.5-0.2-0.8-0.3c-0.2-0.1-0.5-0.3-0.6-0.5c-0.2-0.2-0.4-0.4-0.5-0.6
       c-0.1-0.2-0.3-0.5-0.3-0.7c-0.1-0.2-0.1-0.5-0.1-0.8c0-0.3,0-0.5,0.1-0.8c0.1-0.3,0.2-0.6,0.3-0.9c0.1-0.3,0.3-0.5,0.5-0.7
       c0,0,0.1-0.1,0.1-0.1c0,0,0.1,0,0.1,0l0.8,0.8c0,0,0.1,0.1,0.1,0.1C211.4,329.3,211.4,329.3,211.3,329.4z"
-                />
-                <path
-                  className="st10"
-                  d="M214.2,327c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.2-0.1,0.2-0.2c0.1-0.1,0.2-0.2,0.3-0.4c0.1-0.1,0.1-0.3,0.2-0.4
+              />
+              <path
+                className="st10"
+                d="M214.2,327c0,0,0.1-0.1,0.2-0.1c0.1-0.1,0.2-0.1,0.2-0.2c0.1-0.1,0.2-0.2,0.3-0.4c0.1-0.1,0.1-0.3,0.2-0.4
       c0-0.1,0-0.2,0-0.3c0-0.1,0-0.2-0.1-0.2c0-0.1-0.1-0.1-0.1-0.1s-0.1-0.1-0.2-0.1c-0.1,0-0.2,0-0.2,0s-0.2,0.1-0.2,0.2
       s-0.1,0.2-0.2,0.2c-0.1,0.1-0.1,0.2-0.1,0.2c-0.2,0.3-0.4,0.5-0.5,0.7c-0.2,0.2-0.4,0.4-0.5,0.5c-0.2,0.1-0.4,0.2-0.6,0.2
       c-0.2,0-0.4,0-0.6,0c-0.2-0.1-0.5-0.1-0.6-0.3c-0.2-0.1-0.3-0.3-0.4-0.5c-0.1-0.2-0.2-0.5-0.2-0.7c0-0.3,0-0.6,0.1-0.9
@@ -905,70 +899,70 @@ export default function NewWheel({
       c-0.1,0.1-0.2,0.2-0.3,0.2c-0.1,0.1-0.2,0.1-0.2,0.1l0,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0
       c-0.1,0-0.1,0.1-0.2,0.1c0,0-0.1-0.1-0.1-0.1l-0.5-0.8c0-0.1,0-0.1,0-0.1C214.1,327.1,214.1,327.1,214.2,327
       C214.2,327,214.2,327,214.2,327z"
-                />
-              </g>
-              <g>
-                <path
-                  className="st11"
-                  d="M198.4,396.8c1.1,0.2,1.7,0.8,1.9,1.3c0.6,1,0.5,2.1,0.4,2.8c-0.5,2.1-2.3,3-4,2.6
+              />
+            </g>
+            <g>
+              <path
+                className="st11"
+                d="M198.4,396.8c1.1,0.2,1.7,0.8,1.9,1.3c0.6,1,0.5,2.1,0.4,2.8c-0.5,2.1-2.3,3-4,2.6
       c-0.5-0.1-1.1-0.3-1.5-0.7c-0.5-0.4-2.2-2.3-3.3-3.6l0.5-2.3c0.7,0.8,1.6,1.8,2.3,2.6c0-0.1,0-0.2,0-0.3
       C195.1,397.3,196.5,396.3,198.4,396.8z M199.2,400.4c0.2-0.9-0.3-1.7-1.1-1.8c-0.8-0.2-1.6,0.4-1.8,1.2
       c-0.2,0.8,0.3,1.7,1.1,1.8C198.2,401.8,199,401.3,199.2,400.4z"
-                />
-              </g>
+              />
             </g>
-            <path
-              className="st12"
-              d="M307.4,338.3c28.3-0.1,51.2,22.8,51.3,51.1c0.1,28.3-22.8,51.2-51.1,51.3c-28.3,0.1-51.2-22.8-51.3-51.1
+          </g>
+          <path
+            className="st12"
+            d="M307.4,338.3c28.3-0.1,51.2,22.8,51.3,51.1c0.1,28.3-22.8,51.2-51.1,51.3c-28.3,0.1-51.2-22.8-51.3-51.1
   C256.2,361.3,279.1,338.3,307.4,338.3z"
-            />
-            <g>
-              <path
-                className="st13"
-                d="M272.2,397.2v-0.6l2.2-0.2v0.6c0,1.1,0.6,1.8,1.5,1.8c0.9,0,1.5-0.6,1.5-1.5c0-1-0.4-1.7-2.1-3.3
+          />
+          <g>
+            <path
+              className="st13"
+              d="M272.2,397.2v-0.6l2.2-0.2v0.6c0,1.1,0.6,1.8,1.5,1.8c0.9,0,1.5-0.6,1.5-1.5c0-1-0.4-1.7-2.1-3.3
     c-2.3-2.2-3-3.4-3-5.1c0-2.3,1.3-3.8,3.5-3.8c2.2,0,3.5,1.5,3.5,3.8v0.4l-2.2,0.2v-0.4c0-1.2-0.5-1.8-1.3-1.8
     c-0.8,0-1.3,0.5-1.3,1.5s0.5,1.7,2.1,3.3c2.2,2.2,3,3.4,3,5.1c0,2.2-1.5,3.8-3.8,3.8C273.7,401,272.2,399.4,272.2,397.2z"
-              />
-              <path
-                className="st13"
-                d="M281.5,397.3v-8.4c0-2.2,1.5-3.7,3.7-3.7c2.2,0,3.7,1.5,3.7,3.7v8.4c0,2.2-1.5,3.7-3.7,3.7
+            />
+            <path
+              className="st13"
+              d="M281.5,397.3v-8.4c0-2.2,1.5-3.7,3.7-3.7c2.2,0,3.7,1.5,3.7,3.7v8.4c0,2.2-1.5,3.7-3.7,3.7
     C283,401,281.5,399.5,281.5,397.3z M286.6,397.3v-8.4c0-1-0.6-1.5-1.4-1.5c-0.9,0-1.4,0.5-1.4,1.5v8.4c0,1,0.5,1.5,1.4,1.5
     C286.1,398.8,286.6,398.2,286.6,397.3z"
-              />
-              <path
-                className="st13"
-                d="M291.2,397.4v-12h2.3v12c0,0.9,0.6,1.4,1.3,1.4s1.3-0.5,1.3-1.4v-12h2.3v12c0,2.2-1.5,3.6-3.6,3.6
+            />
+            <path
+              className="st13"
+              d="M291.2,397.4v-12h2.3v12c0,0.9,0.6,1.4,1.3,1.4s1.3-0.5,1.3-1.4v-12h2.3v12c0,2.2-1.5,3.6-3.6,3.6
     S291.2,399.5,291.2,397.4z"
-              />
-              <path
-                className="st13"
-                d="M300.9,385.4h2.3v13.2h4.2v2.2h-6.5V385.4z"
-              />
-              <path
-                className="st13"
-                d="M309,397.3v-8.5c0-2.2,1.5-3.7,3.7-3.7s3.7,1.5,3.7,3.7v1.8H314v-1.8c0-0.9-0.5-1.5-1.3-1.5
+            />
+            <path
+              className="st13"
+              d="M300.9,385.4h2.3v13.2h4.2v2.2h-6.5V385.4z"
+            />
+            <path
+              className="st13"
+              d="M309,397.3v-8.5c0-2.2,1.5-3.7,3.7-3.7s3.7,1.5,3.7,3.7v1.8H314v-1.8c0-0.9-0.5-1.5-1.3-1.5
     c-0.8,0-1.3,0.5-1.3,1.5v8.5c0,0.9,0.5,1.5,1.3,1.5c0.8,0,1.3-0.5,1.3-1.5v-2.2h2.3v2.2c0,2.2-1.5,3.7-3.7,3.7
     S309,399.5,309,397.3z"
-              />
-              <path
-                className="st13"
-                d="M323.1,397.4h-2.5l-0.5,3.4h-2.3l2.6-15.4h3.1l2.6,15.4h-2.4L323.1,397.4z M322.7,395.1l-0.9-6.4l-0.9,6.4
+            />
+            <path
+              className="st13"
+              d="M323.1,397.4h-2.5l-0.5,3.4h-2.3l2.6-15.4h3.1l2.6,15.4h-2.4L323.1,397.4z M322.7,395.1l-0.9-6.4l-0.9,6.4
     H322.7z"
-              />
-              <path
-                className="st13"
-                d="M333,400.8l-1.7-6.4h-1.2v6.4h-2.3v-15.4h3.7c2.2,0,3.7,1.5,3.7,3.7v1.7c0,1.4-0.6,2.5-1.6,3.1l2,6.9H333z
+            />
+            <path
+              className="st13"
+              d="M333,400.8l-1.7-6.4h-1.2v6.4h-2.3v-15.4h3.7c2.2,0,3.7,1.5,3.7,3.7v1.7c0,1.4-0.6,2.5-1.6,3.1l2,6.9H333z
      M330.1,392.2h1.2c0.9,0,1.4-0.5,1.4-1.4V389c0-0.9-0.5-1.4-1.4-1.4h-1.2V392.2z"
-              />
-              <path
-                className="st13"
-                d="M337.3,385.4h6.6v2.2h-4.3v4.3h3.4v2.2h-3.4v4.5h4.3v2.2h-6.6V385.4z"
-              />
-            </g>
-            <g>
-              <path
-                className="st14"
-                d="M303.1,415.6c0.2,0.1,0.2,0.2,0.2,0.4c-0.4,0.9-1,1.3-1.6,1.3c-0.1,0-0.3,0-0.4-0.1
+            />
+            <path
+              className="st13"
+              d="M337.3,385.4h6.6v2.2h-4.3v4.3h3.4v2.2h-3.4v4.5h4.3v2.2h-6.6V385.4z"
+            />
+          </g>
+          <g>
+            <path
+              className="st14"
+              d="M303.1,415.6c0.2,0.1,0.2,0.2,0.2,0.4c-0.4,0.9-1,1.3-1.6,1.3c-0.1,0-0.3,0-0.4-0.1
     c-0.3-0.1-0.6-0.3-0.9-0.6c-0.3-0.3-0.5-0.7-0.8-1.2c-0.2-0.5-0.4-1.1-0.6-1.8c-0.2-0.7-0.3-1.5-0.4-2.3c-0.4,2.3-1,4.3-1.6,6.1
     c-0.6,1.8-1.3,2.8-2,3.2c-0.5,0.3-1,0.1-1.5-0.4c-0.5-0.6-0.8-2-0.8-4.2c0-0.5,0-1,0-1.5c-1,3.7-2.1,6.1-3.3,7.4
     c-0.5,0.6-1.1,0.9-1.6,0.9c-0.1,0-0.1,0-0.2,0c-0.5-0.1-1-0.4-1.4-1c-1-1.4-1.5-4-1.7-7.8c-0.2-3.4,0-6.1,0.5-8.1
@@ -982,10 +976,10 @@ export default function NewWheel({
     c1-0.5,1.9-2.8,2.9-6.9c0.4-1.7,0.7-3.3,0.9-4.9c0-0.9,0.1-1.8,0.2-2.7c0,0,0-0.1,0-0.1l0,0v0l0,0h0c0,0,0,0,0,0s0,0,0,0
     c0,0,0,0,0,0c0,0,0.1,0,0.1,0h0h0l0,0l0,0l0,0l0,0c0,0,0,0.1,0,0.1v0c0,0.1,0,0.2,0,0.4c0,0.5-0.1,1.3-0.2,2.3
     c-0.1,2.4,0.2,4.3,0.6,5.9c0.5,1.5,1,2.4,1.7,2.6c0.4,0.1,0.9-0.2,1.2-0.9C302.8,415.6,302.9,415.5,303.1,415.6z"
-              />
-              <path
-                className="st14"
-                d="M314.9,415.9c0.1,0.1,0.1,0.2,0,0.2c-0.1,0.1-0.2,0.1-0.4,0.1c-0.4,0-0.9,0.2-1.5,0.6
+            />
+            <path
+              className="st14"
+              d="M314.9,415.9c0.1,0.1,0.1,0.2,0,0.2c-0.1,0.1-0.2,0.1-0.4,0.1c-0.4,0-0.9,0.2-1.5,0.6
     c-0.6,0.4-1.1,0.8-1.5,1.1c-0.4,0.4-0.9,0.8-1.6,1.4c-0.9,0.9-1.5,1.4-1.7,1.4c-0.5,0.1-0.9,0-1.2-0.2c-0.4-0.4-0.6-1.1-0.6-2.3
     c0-0.4,0.1-0.9,0.2-1.3c0.1-0.2,0.1-0.4,0-0.5c-0.1,0.1-0.2,0.2-0.2,0.4c-0.5,1.3-0.9,3-1.1,5c0,0.1-0.1,0.1-0.1,0.2
     c-0.1,0.2-0.1,0.3-0.2,0.4s-0.2,0.1-0.2,0.1c-0.1,0-0.1,0-0.2,0c-0.8-0.4-1.3-1.5-1.6-3.3c-0.3-1.8-0.4-3.4-0.3-4.9
@@ -996,28 +990,28 @@ export default function NewWheel({
     s0.8-0.6,1.3-0.9c0.5-0.3,1-0.4,1.4-0.4C314.8,415.8,314.9,415.8,314.9,415.9z M304.4,415.2c0.7-0.4,1.4-0.9,2.1-1.8
     c0.7-0.8,1.3-1.6,1.8-2.5c0.5-0.9,0.8-1.6,1-2.3c0.3-1.3,0.3-2.2-0.1-2.8c-0.1-0.2-0.3-0.3-0.5-0.4h0c-0.1,0-0.3,0.1-0.5,0.2
     c-0.7,0.5-1.5,1.7-2.3,3.6c-0.8,1.8-1.3,3.6-1.4,5.2C304.4,414.7,304.4,414.9,304.4,415.2z"
-              />
-              <path
-                className="st14"
-                d="M325.1,415.8c0.1,0.1,0.1,0.2,0,0.2c-0.1,0.1-0.2,0.1-0.5,0.1c-0.3,0-1.1,0.4-2.5,1.2
+            />
+            <path
+              className="st14"
+              d="M325.1,415.8c0.1,0.1,0.1,0.2,0,0.2c-0.1,0.1-0.2,0.1-0.5,0.1c-0.3,0-1.1,0.4-2.5,1.2
     c-2.4,1.4-4.2,2.1-5.1,2.2c-0.1,0-0.2,0-0.3,0c-0.6,0-1.1-0.2-1.6-0.6c-0.7-0.7-1.1-1.6-1.1-2.8c0-0.7,0.1-1.4,0.4-2
     c0.3-0.7,0.6-1.2,1.1-1.5c0.5-0.4,1-0.6,1.6-0.5c0.5,0.1,0.8,0.6,1,1.4v0.1c0.1,0.8,0.1,1.4-0.2,2c-0.2,0.6-0.6,0.9-1,1.2
     c-0.4,0.2-0.7,0.2-1.1,0.1c0.2,1.3,0.6,1.9,1.3,2c1,0,2.6-0.6,4.9-1.9c1.4-0.8,2.2-1.1,2.6-1.1
     C324.9,415.7,325.1,415.8,325.1,415.8z M316.4,415.8c0.5-0.3,0.8-1.1,1-2.4c0-0.2,0-0.4-0.1-0.4h0c-0.4,0-0.8,0.4-1,1
     s-0.4,1.3-0.4,1.9C316.1,415.9,316.3,415.9,316.4,415.8z"
-              />
-              <path
-                className="st14"
-                d="M335.5,415.8c0.1,0.1,0.1,0.2,0,0.2c-0.1,0.1-0.2,0.1-0.5,0.1c-0.3,0-1.1,0.4-2.5,1.2
+            />
+            <path
+              className="st14"
+              d="M335.5,415.8c0.1,0.1,0.1,0.2,0,0.2c-0.1,0.1-0.2,0.1-0.5,0.1c-0.3,0-1.1,0.4-2.5,1.2
     c-2.4,1.4-4.2,2.1-5.1,2.2c-0.1,0-0.2,0-0.3,0c-0.6,0-1.1-0.2-1.6-0.6c-0.7-0.7-1.1-1.6-1.1-2.8c0-0.7,0.1-1.4,0.4-2
     c0.3-0.7,0.6-1.2,1.1-1.5c0.5-0.4,1-0.6,1.6-0.5c0.5,0.1,0.8,0.6,1,1.4v0.1c0.1,0.8,0.1,1.4-0.2,2c-0.2,0.6-0.6,0.9-1,1.2
     c-0.4,0.2-0.7,0.2-1.1,0.1c0.2,1.3,0.6,1.9,1.3,2c1,0,2.6-0.6,4.9-1.9c1.4-0.8,2.2-1.1,2.6-1.1
     C335.3,415.7,335.5,415.8,335.5,415.8z M326.8,415.8c0.5-0.3,0.8-1.1,1-2.4c0-0.2,0-0.4-0.1-0.4h0c-0.4,0-0.8,0.4-1,1
     c-0.3,0.7-0.4,1.3-0.4,1.9C326.4,415.9,326.6,415.9,326.8,415.8z"
-              />
-              <path
-                className="st14"
-                d="M344.9,415.6c0.1,0.1,0.1,0.1,0.1,0.3s0,0.2-0.1,0.3s-0.2,0.1-0.3,0.1c-0.1,0-0.3,0.1-0.5,0.3
+            />
+            <path
+              className="st14"
+              d="M344.9,415.6c0.1,0.1,0.1,0.1,0.1,0.3s0,0.2-0.1,0.3s-0.2,0.1-0.3,0.1c-0.1,0-0.3,0.1-0.5,0.3
     c-0.2,0.2-0.4,0.4-0.6,0.8c-0.2,0.4-0.4,0.7-0.6,1c-0.2,0.3-0.4,0.7-0.7,1.3c-0.4,0.7-0.7,1.3-0.9,1.7c-0.2,0.4-0.5,0.9-0.9,1.5
     c-0.4,0.6-0.7,1.1-1,1.4c-0.3,0.3-0.6,0.6-1,0.8s-0.8,0.4-1.1,0.4c0,0-0.1,0-0.1,0c-0.4,0-0.7-0.2-1-0.5
     c-0.3-0.3-0.5-0.7-0.7-1.2c-0.2-0.5-0.3-1-0.4-1.6c-0.1-0.6-0.2-1.2-0.2-1.8c0-0.6,0-1.2-0.1-1.8c0-0.6,0-1.1,0-1.6
@@ -1027,76 +1021,76 @@ export default function NewWheel({
     c0.4-0.7,0.7-1.2,0.9-1.5c0.2-0.3,0.4-0.7,0.7-1.2c0.3-0.4,0.6-0.8,0.8-1s0.5-0.3,0.7-0.3C344.7,415.5,344.8,415.5,344.9,415.6z
      M339.9,403.8L339.9,403.8L339.9,403.8c-0.2,0-0.4,0.1-0.5,0.3c-0.6,0.6-1.2,2.1-1.6,4.3s-0.8,4.4-0.9,6.5c0.6-0.7,1.3-1.8,2-3.3
     c0.5-1.1,0.9-2.1,1.2-3.2c0.3-1.1,0.5-1.8,0.6-2.3c0.1-1.1,0-1.8-0.3-2.1C340.1,403.9,340,403.8,339.9,403.8z"
+            />
+          </g>
+          <g
+            id="group4"
+            style={clickCSS(4, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 4, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.feelings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+          >
+            <path
+              className="st6"
+              d="M300.4,496c-4.3,0.6-7.4,4.5-6.8,8.9c0.6,4.3,4.5,7.4,8.9,6.8c4.3-0.6,7.4-4.5,6.8-8.9
+    C308.6,498.5,304.7,495.4,300.4,496z"
+            />
+            <g>
+              <path
+                className="st11"
+                d="M304.4,505.6l-0.9,0.1l0.2,1.6l-1.6,0.2l-0.2-1.6l-3.6,0.5l-0.2-1.3l3.4-5.1l1.2-0.2l0.6,4.4l0.9-0.1
+      L304.4,505.6z M300.2,504.7l1.5-0.2l-0.2-1.8L300.2,504.7z"
               />
             </g>
-            <g
-              id="group4"
-              style={clickCSS(4, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 4, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.feelings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-            >
+            <g>
               <path
-                className="st6"
-                d="M300.4,496c-4.3,0.6-7.4,4.5-6.8,8.9c0.6,4.3,4.5,7.4,8.9,6.8c4.3-0.6,7.4-4.5,6.8-8.9
-    C308.6,498.5,304.7,495.4,300.4,496z"
-              />
-              <g>
-                <path
-                  className="st11"
-                  d="M304.4,505.6l-0.9,0.1l0.2,1.6l-1.6,0.2l-0.2-1.6l-3.6,0.5l-0.2-1.3l3.4-5.1l1.2-0.2l0.6,4.4l0.9-0.1
-      L304.4,505.6z M300.2,504.7l1.5-0.2l-0.2-1.8L300.2,504.7z"
-                />
-              </g>
-              <g>
-                <path
-                  className="st10"
-                  d="M312.8,499.3c0-0.1,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l3.8-0.5c0.1,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.1,1
+                className="st10"
+                d="M312.8,499.3c0-0.1,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l3.8-0.5c0.1,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.1,1
       c0,0,0,0.1,0,0.1s-0.1,0.1-0.1,0.1l-2.4,0.3l0.2,1.2l1.8-0.2c0.1,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.1,0.9c0,0,0,0.1,0,0.1
       c0,0-0.1,0.1-0.1,0.1l-1.8,0.2l0.2,1.8c0,0.1,0,0.2-0.2,0.2l-1.2,0.2c-0.1,0-0.2-0.1-0.2-0.1L312.8,499.3z"
-                />
-                <path
-                  className="st10"
-                  d="M317.9,498.7c0-0.1,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l3.9-0.5c0.1,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.1,1
+              />
+              <path
+                className="st10"
+                d="M317.9,498.7c0-0.1,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l3.9-0.5c0.1,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.1,1
       c0,0,0,0.1,0,0.1c0,0-0.1,0.1-0.1,0.1l-2.6,0.3l0.1,1l2-0.3c0,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.1,0.9c0,0,0,0.1,0,0.1
       c0,0-0.1,0.1-0.1,0.1l-2,0.3l0.1,1l2.7-0.3c0.1,0,0.2,0,0.2,0.2l0.1,1c0,0,0,0.1,0,0.1c0,0.1,0,0.1-0.1,0.1l-4,0.5
       c-0.1,0-0.1,0-0.1,0c0,0-0.1-0.1-0.1-0.1L317.9,498.7z"
-                />
-                <path
-                  className="st10"
-                  d="M323.3,498c0-0.1,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l3.9-0.5c0.1,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.1,1
+              />
+              <path
+                className="st10"
+                d="M323.3,498c0-0.1,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l3.9-0.5c0.1,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.1,1
       c0,0,0,0.1,0,0.1c0,0-0.1,0.1-0.1,0.1l-2.6,0.3l0.1,1l2-0.3c0.1,0,0.1,0,0.1,0s0.1,0.1,0.1,0.1l0.1,0.9c0,0,0,0.1,0,0.1
       c0,0-0.1,0.1-0.1,0.1l-2,0.3l0.1,1l2.7-0.3c0.1,0,0.2,0,0.2,0.2l0.1,1c0,0,0,0.1,0,0.1c0,0.1-0.1,0.1-0.1,0.1l-4,0.5
       c-0.1,0-0.1,0-0.1,0c0,0-0.1-0.1-0.1-0.1L323.3,498z"
-                />
-                <path
-                  className="st10"
-                  d="M328.5,497.3c0,0,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l1.2-0.2c0,0,0.1,0,0.1,0s0.1,0.1,0.1,0.1l0.6,4.3
+              />
+              <path
+                className="st10"
+                d="M328.5,497.3c0,0,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l1.2-0.2c0,0,0.1,0,0.1,0s0.1,0.1,0.1,0.1l0.6,4.3
       l2.2-0.3c0,0,0.1,0,0.1,0s0.1,0.1,0.1,0.1l0.1,1c0,0,0,0.1,0,0.1c0,0-0.1,0.1-0.1,0.1l-3.5,0.5c-0.1,0-0.2,0-0.2-0.2
       L328.5,497.3z"
-                />
-                <path
-                  className="st10"
-                  d="M333.3,496.6c0,0,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l1.2-0.2c0,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.7,5.5
+              />
+              <path
+                className="st10"
+                d="M333.3,496.6c0,0,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l1.2-0.2c0,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.7,5.5
       c0,0.1,0,0.2-0.2,0.2l-1.2,0.2c-0.1,0-0.2,0-0.2-0.2L333.3,496.6z"
-                />
-                <path
-                  className="st10"
-                  d="M336.2,496.3c0,0,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l1.3-0.2c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1
+              />
+              <path
+                className="st10"
+                d="M336.2,496.3c0,0,0-0.1,0-0.1c0,0,0.1-0.1,0.1-0.1l1.3-0.2c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0.1
       c0.4,0.5,0.8,1,1.2,1.5c0.4,0.5,0.8,1,1.2,1.5l-0.4-3.2c0,0,0-0.1,0-0.1c0,0,0.1,0,0.1-0.1l1.1-0.1c0.1,0,0.1,0,0.1,0
       c0,0,0.1,0.1,0.1,0.1l0.7,5.6c0,0.1,0,0.1,0,0.1s-0.1,0-0.1,0.1l-1.3,0.2c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1-0.1
       c-0.4-0.5-0.9-1.1-1.3-1.6c-0.4-0.5-0.8-1.1-1.3-1.6l0.4,3.4c0,0.1,0,0.1,0,0.1s-0.1,0.1-0.1,0.1l-1.1,0.1c-0.1,0-0.1,0-0.1,0
       s-0.1-0.1-0.1-0.1L336.2,496.3z"
-                />
-                <path
-                  className="st10"
-                  d="M346.6,496.4c-0.1-0.1-0.3-0.1-0.5-0.2c-0.2,0-0.3,0-0.5,0c-0.2,0-0.4,0.1-0.6,0.2
+              />
+              <path
+                className="st10"
+                d="M346.6,496.4c-0.1-0.1-0.3-0.1-0.5-0.2c-0.2,0-0.3,0-0.5,0c-0.2,0-0.4,0.1-0.6,0.2
       c-0.2,0.1-0.3,0.2-0.4,0.4c-0.1,0.2-0.2,0.3-0.2,0.5c0,0.2-0.1,0.4,0,0.6c0,0.2,0.1,0.4,0.2,0.6c0.1,0.2,0.2,0.3,0.4,0.5
       s0.3,0.2,0.5,0.3c0.2,0.1,0.4,0.1,0.6,0c0.1,0,0.2,0,0.3-0.1c0.1,0,0.2-0.1,0.3-0.1l-0.1-1c0-0.1,0-0.1,0-0.1
       c0,0,0.1-0.1,0.1-0.1l1.1-0.1c0,0,0.1,0,0.1,0c0,0,0.1,0.1,0.1,0.1l0.3,1.9c0,0.1,0,0.1-0.1,0.2c-0.1,0.1-0.2,0.2-0.4,0.3
@@ -1105,10 +1099,10 @@ export default function NewWheel({
       c0-0.3,0.1-0.5,0.2-0.8c0.1-0.2,0.2-0.5,0.4-0.7c0.2-0.2,0.3-0.4,0.5-0.6c0.2-0.2,0.4-0.3,0.7-0.4c0.2-0.1,0.5-0.2,0.8-0.2
       c0.3,0,0.6,0,0.9,0c0.3,0.1,0.6,0.1,0.8,0.3c0,0,0.1,0.1,0.1,0.1c0,0,0,0.1,0,0.2l-0.5,1c0,0-0.1,0.1-0.1,0.1
       C346.7,496.4,346.6,496.4,346.6,496.4z"
-                />
-                <path
-                  className="st10"
-                  d="M349.8,498.3c0,0,0.1,0.1,0.2,0.1c0.1,0.1,0.2,0.1,0.3,0.2c0.1,0.1,0.3,0.1,0.4,0.2c0.1,0,0.3,0,0.4,0
+              />
+              <path
+                className="st10"
+                d="M349.8,498.3c0,0,0.1,0.1,0.2,0.1c0.1,0.1,0.2,0.1,0.3,0.2c0.1,0.1,0.3,0.1,0.4,0.2c0.1,0,0.3,0,0.4,0
       c0.1,0,0.2,0,0.3-0.1c0.1,0,0.2-0.1,0.2-0.1c0-0.1,0.1-0.1,0.1-0.2c0-0.1,0-0.1,0-0.2c0-0.1-0.1-0.2-0.1-0.2
       c-0.1-0.1-0.2-0.1-0.3-0.1c-0.1,0-0.2-0.1-0.3-0.1c-0.1,0-0.2,0-0.3-0.1c-0.3-0.1-0.6-0.2-0.9-0.2c-0.3-0.1-0.5-0.2-0.7-0.3
       c-0.2-0.1-0.3-0.3-0.4-0.5c-0.1-0.2-0.2-0.4-0.2-0.6c0-0.2,0-0.5,0.1-0.7c0.1-0.2,0.2-0.4,0.4-0.6c0.2-0.2,0.4-0.3,0.6-0.4
@@ -1121,96 +1115,96 @@ export default function NewWheel({
       c-0.3-0.1-0.6-0.2-0.9-0.3c-0.1-0.1-0.2-0.1-0.3-0.2c-0.1-0.1-0.1-0.1-0.2-0.2l0,0c0,0,0,0,0,0c0,0,0,0,0,0c0,0,0,0,0,0
       c0,0,0,0,0,0c-0.1-0.1-0.1-0.1-0.1-0.1c0,0,0-0.1,0.1-0.2l0.6-0.7c0.1,0,0.1-0.1,0.1-0.1c0,0,0,0,0.1,0
       C349.8,498.3,349.8,498.3,349.8,498.3z"
-                />
-              </g>
+              />
             </g>
-            <path
-              id="group6"
-              style={clickCSS(6, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 6, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.surroundings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st6"
-              d="M149.8,308.3c7.3-14.4,16.2-27.5,26.3-39.1c1-1.1,1.9-2.2,2.9-3.2c1.4-1.5,3-2.2,5.2,0.4l23.9,22.8
+          </g>
+          <path
+            id="group6"
+            style={clickCSS(6, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 6, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.surroundings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st6"
+            d="M149.8,308.3c7.3-14.4,16.2-27.5,26.3-39.1c1-1.1,1.9-2.2,2.9-3.2c1.4-1.5,3-2.2,5.2,0.4l23.9,22.8
   c-9.9,10.4-18.5,22.3-25.3,35.8c-17.7,35.1-20,73.9-9.6,108.7l-30,8.8c-5.2,1.3-6,0.6-7.6-5.3
   C124.7,395.5,128.9,349.8,149.8,308.3z"
-            />
-            <path
-              id="group4"
-              style={clickCSS(4, clickId.id, clickId.isClicked)}
-              onClick={() => {
-                transitionTitle(true);
-                setClickID({ id: 4, isClicked: !clickId.isClicked });
-                if (!clickId.isClicked) {
-                  setCategory(wheelInfo.feelings);
-                } else {
-                  setCategory(wheelInfo.default);
-                }
-              }}
-              className="st5"
-              d="M297.4,576.1c-15.3-0.9-30-3.7-43.9-8.3c-1.3-0.4-2.6-0.9-3.9-1.3c-1.8-0.6-3.1-1.7-1.7-4.7l10.9-29.3
+          />
+          <path
+            id="group4"
+            style={clickCSS(4, clickId.id, clickId.isClicked)}
+            onClick={() => {
+              transitionTitle(true);
+              setClickID({ id: 4, isClicked: !clickId.isClicked });
+              if (!clickId.isClicked) {
+                setCategory(wheelInfo.feelings);
+              } else {
+                setCategory(wheelInfo.default);
+              }
+            }}
+            className="st5"
+            d="M297.4,576.1c-15.3-0.9-30-3.7-43.9-8.3c-1.3-0.4-2.6-0.9-3.9-1.3c-1.8-0.6-3.1-1.7-1.7-4.7l10.9-29.3
   c12.7,4.7,26.4,7.7,40.7,8.6c37.2,2.2,71.8-10.3,98.3-32.5l19,22.8c3.1,4.1,2.8,5-1.8,8.6C382.8,565.2,341.4,578.7,297.4,576.1z"
-            />
+          />
+          <g>
             <g>
-              <g>
-                <path
-                  className="st15"
-                  d="M288.6,375.5h0.5c0,0.8,0.2,1.2,0.5,1.2c0.3,0,0.5-0.3,0.5-0.9c0-0.5-0.2-0.9-0.6-1.3
+              <path
+                className="st15"
+                d="M288.6,375.5h0.5c0,0.8,0.2,1.2,0.5,1.2c0.3,0,0.5-0.3,0.5-0.9c0-0.5-0.2-0.9-0.6-1.3
       c-0.6-0.6-0.8-1.1-0.8-1.7c0-0.8,0.3-1.2,0.9-1.2c0.6,0,0.9,0.4,0.9,1.4H290c0-0.7-0.2-1-0.5-1c-0.3,0-0.4,0.3-0.4,0.7
       c0,0.5,0.2,0.9,0.6,1.3c0.6,0.6,0.8,1.1,0.8,1.7c0,0.9-0.3,1.3-0.9,1.3C288.9,377.1,288.6,376.7,288.6,375.5z"
-                />
-                <path
-                  className="st15"
-                  d="M292.6,374.4c0-2.1,0.2-2.8,1-2.8c0.8,0,1,0.7,1,2.8s-0.2,2.8-1,2.8C292.8,377.1,292.6,376.5,292.6,374.4z
+              />
+              <path
+                className="st15"
+                d="M292.6,374.4c0-2.1,0.2-2.8,1-2.8c0.8,0,1,0.7,1,2.8s-0.2,2.8-1,2.8C292.8,377.1,292.6,376.5,292.6,374.4z
        M294.1,374.4c0-1.8-0.1-2.3-0.5-2.3c-0.4,0-0.5,0.5-0.5,2.3c0,1.8,0.1,2.3,0.5,2.3C294,376.7,294.1,376.2,294.1,374.4z"
-                />
-                <path
-                  className="st15"
-                  d="M296.9,375.9v-4.3h0.5v4.2c0,0.6,0.1,0.8,0.5,0.8c0.4,0,0.5-0.2,0.5-0.8v-4.2h0.4v4.3c0,0.8-0.3,1.2-1,1.2
+              />
+              <path
+                className="st15"
+                d="M296.9,375.9v-4.3h0.5v4.2c0,0.6,0.1,0.8,0.5,0.8c0.4,0,0.5-0.2,0.5-0.8v-4.2h0.4v4.3c0,0.8-0.3,1.2-1,1.2
       C297.2,377.1,296.9,376.7,296.9,375.9z"
-                />
-                <path
-                  className="st15"
-                  d="M301.1,371.6h0.5v5h1.2v0.4h-1.7V371.6z"
-                />
-                <path
-                  className="st15"
-                  d="M308.2,371.6h0.4l0.9,5.4H309l-0.2-1.4h-0.9l-0.2,1.4h-0.4L308.2,371.6z M308.7,375.2l-0.4-2.4h0l-0.4,2.4
+              />
+              <path
+                className="st15"
+                d="M301.1,371.6h0.5v5h1.2v0.4h-1.7V371.6z"
+              />
+              <path
+                className="st15"
+                d="M308.2,371.6h0.4l0.9,5.4H309l-0.2-1.4h-0.9l-0.2,1.4h-0.4L308.2,371.6z M308.7,375.2l-0.4-2.4h0l-0.4,2.4
       H308.7z"
-                />
-                <path
-                  className="st15"
-                  d="M311.6,371.6h0.7c0.8,0,1.2,0.5,1.2,1.3c0,0.6-0.2,1-0.7,1.2v0c0.5,0.2,0.7,0.6,0.7,1.4
+              />
+              <path
+                className="st15"
+                d="M311.6,371.6h0.7c0.8,0,1.2,0.5,1.2,1.3c0,0.6-0.2,1-0.7,1.2v0c0.5,0.2,0.7,0.6,0.7,1.4
       c0,1-0.4,1.5-1.2,1.5h-0.8V371.6z M312.2,374c0.6,0,0.8-0.3,0.8-0.9c0-0.7-0.2-0.9-0.7-0.9h-0.2v1.9H312.2z M312.3,376.6
       c0.6,0,0.8-0.3,0.8-1.1c0-0.8-0.2-1.1-0.8-1.1h-0.2v2.2H312.3z"
-                />
-                <path
-                  className="st15"
-                  d="M315.7,374.4c0-2.1,0.2-2.8,1-2.8s1,0.7,1,2.8s-0.2,2.8-1,2.8S315.7,376.5,315.7,374.4z M317.2,374.4
+              />
+              <path
+                className="st15"
+                d="M315.7,374.4c0-2.1,0.2-2.8,1-2.8s1,0.7,1,2.8s-0.2,2.8-1,2.8S315.7,376.5,315.7,374.4z M317.2,374.4
       c0-1.8-0.1-2.3-0.5-2.3s-0.5,0.5-0.5,2.3c0,1.8,0.1,2.3,0.5,2.3S317.2,376.2,317.2,374.4z"
-                />
-                <path
-                  className="st15"
-                  d="M322,374.4c0,1.9-0.4,2.7-1.3,2.7H320v-5.4h0.7C321.6,371.6,322,372.4,322,374.4z M321.5,374.4
+              />
+              <path
+                className="st15"
+                d="M322,374.4c0,1.9-0.4,2.7-1.3,2.7H320v-5.4h0.7C321.6,371.6,322,372.4,322,374.4z M321.5,374.4
       c0-1.7-0.2-2.3-0.9-2.3h-0.2v4.5h0.2C321.3,376.6,321.5,376,321.5,374.4z"
-                />
-                <path
-                  className="st15"
-                  d="M324.2,371.6h1.7v0.4h-1.3v1.9h1.1v0.4h-1.1v2.2h1.3v0.4h-1.7V371.6z"
-                />
-              </g>
+              />
+              <path
+                className="st15"
+                d="M324.2,371.6h1.7v0.4h-1.3v1.9h1.1v0.4h-1.1v2.2h1.3v0.4h-1.7V371.6z"
+              />
+            </g>
+            <g>
               <g>
                 <g>
-                  <g>
-                    <path
-                      className="st13"
-                      d="M320,363.7c-0.1-0.8-0.3-1.6-0.3-2.8c0-1.1,0.2-2.1,0.5-3.1c-0.9-1-1.7-2-2.7-2.9
+                  <path
+                    className="st13"
+                    d="M320,363.7c-0.1-0.8-0.3-1.6-0.3-2.8c0-1.1,0.2-2.1,0.5-3.1c-0.9-1-1.7-2-2.7-2.9
           c-0.3-0.3-0.8-0.7-1-1.1c0-0.1-0.1-0.3-0.1-0.4c-0.1,0-0.1,0-0.2,0c-0.2-0.1-0.3-0.2-0.4-0.4c0,0,0.1,0,0.1,0c0,0,0.1,0,0.1,0
           c-0.1-0.1-0.3-0.1-0.4-0.2c-0.6-0.4-1.4-0.9-1.8-1.4c-0.3-0.4-0.4-0.8-0.7-1.2c0,0,0,0-0.1,0c-1.3-0.3-1.6-1.8-2.3-2.8
           c-0.2,0-0.4,0-0.4,0c-0.2-0.4-0.4-0.7-0.7-1c-0.3-0.3-0.6-0.7-0.8-1.1c0,0-0.1,0-0.1,0c-0.1-0.2-0.3-0.4-0.4-0.6
@@ -1260,28 +1254,27 @@ export default function NewWheel({
           c0.3,0.3,0.6,0.6,0.8,0.9c0.4,0.4,0.7,0.8,1.1,1.1c0.7,0.7,1.3,1.4,2,2.1c0.5,0.5,1,1,1.5,1.5c0.5,0.6,1.1,1.1,1.6,1.7
           c0.5,0.5,1,1,1.4,1.5c1.1,1.2,1.1,1.2,1.6,1.7c0,0,0.1,0.1,1.2,1.3c0,0,0,1.5,0,1.5c0,0,0,0.1,0,0.3
           C318.9,359.6,318.8,359.4,318.6,359.3z"
-                    />
-                  </g>
+                  />
                 </g>
+              </g>
+              <g>
                 <g>
-                  <g>
-                    <path
-                      className="st13"
-                      d="M320.6,368.9c-0.3,0-0.7,0-1,0c0-1.5,0-2.9,0-4.4c-7.5,0-14.9,0-22.4,0c0,1.5,0,2.9,0,4.4
+                  <path
+                    className="st13"
+                    d="M320.6,368.9c-0.3,0-0.7,0-1,0c0-1.5,0-2.9,0-4.4c-7.5,0-14.9,0-22.4,0c0,1.5,0,2.9,0,4.4
           c-0.4,0-0.7,0-1.1,0l0,0c0,0,0-2.8,0-4.5c0-1.4,0-3.5,0-6c4-4.7,7.9-9.4,11.9-14.1c0.2,0.2,0.4,0.4,0.6,0.6
           c1.5,1.5,3,3.1,4.4,4.6c2,2.1,4.1,4.3,6.1,6.4c0.5,0.5,1,1,1.5,1.5C320.6,361.2,320.6,365,320.6,368.9z M299.9,363.3
           c6.6,0,13.1,0,19.6,0c0-0.5,0-1,0-1.5c-0.9-1-9.4-10-9.7-10.2C306.5,355.5,303.2,359.4,299.9,363.3z M297.1,361
           c3.7-4.3,7.3-8.6,10.9-12.8c1.9,2,3.8,4,5.8,6c1.9,2,3.8,4,5.8,6c0-0.8,0-1.5,0-2.3c-3.8-4-7.6-8-11.5-12
           c-3.7,4.3-7.3,8.6-10.9,12.9C297.1,359.5,297.1,360.2,297.1,361z M298.5,363.4c0.9-1,10.5-12.3,10.6-12.5
           c-0.3-0.4-0.6-0.8-0.9-1.2c-3.7,4.3-7.3,8.6-10.9,12.9c0,0.3,0,0.5,0,0.7C297.6,363.4,298,363.4,298.5,363.4z"
-                    />
-                  </g>
+                  />
                 </g>
               </g>
             </g>
           </g>
-        </svg>
-      </div>
-    </>
+        </g>
+      </svg>
+    </div>
   );
 }
