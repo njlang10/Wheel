@@ -3,18 +3,12 @@ import { categories, ratingDetails } from "../constants/settings";
 import { Table, Typography, Form, Input, Button } from "antd";
 
 const calculateIndex = (score) => {
-  if (score >= 5) {
+  if (score > 4) {
     return "Thriving";
-  } else if (score < 5 && score >= 3) {
-    return "Thriving";
-  } else if (score < 3 && score >= 1) {
+  } else if (score <= 4 && score > 1) {
     return "Progressing";
-  } else if (score === 0) {
-    return "Progressing";
-  } else if (score < 0 && score >= -2) {
+  } else if (score <= 1 && score > -3) {
     return "Stagnant";
-  } else if (score > 2 && score >= -4) {
-    return "Struggling";
   } else {
     return "Struggling";
   }
@@ -110,17 +104,20 @@ function ResultsScore({
     return a + v;
   }, 0);
   const scoreResult = calculateIndex(currentResult);
+
   return (
     <>
       <div style={{ position: "relative" }}>
         <Typography.Title level={2}>
           {/* TODO: Pick a specific color */}
           You are currently{" "}
-          <span style={{ color: "green" }}>{scoreResult}</span>
+          <span style={{ color: ratingDetails[scoreResult].color }}>
+            {scoreResult}
+          </span>
         </Typography.Title>
         <Typography.Paragraph>
           <span>
-            {ratingDetails[scoreResult]}{" "}
+            {ratingDetails[scoreResult].description}{" "}
             {shouldShowSignup ? (
               <>
                 <b>

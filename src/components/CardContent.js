@@ -116,6 +116,7 @@ export default function CardContent({
 
               if (isComplete) {
                 setCardContentView("info");
+                setCategory(wheelInfo.default);
               } else {
                 setCategory(nextCategory);
                 setStep(0);
