@@ -4,9 +4,11 @@ import { Transition } from "react-transition-group";
 import { Button, Layout, Row, Col } from "antd";
 import CardContent from "../components/CardContent";
 import InfoContent from "../components/InfoContent";
+import { ResultsTable } from "../components/ResultsContent";
+import ProgressBarCustom from "../components/Progress";
 import { wheel, categories } from "../constants/settings";
 
-const cardContentTypes = { info: "info", survey: "survey" };
+const cardContentTypes = { info: "info", survey: "survey", results: "results" };
 
 // Wrapper to select the appropriate view to show in the card detail
 function CardContentSelector({
@@ -41,6 +43,20 @@ function CardContentSelector({
           userInfo={userInfo}
           setUserInfo={setUserInfo}
         />
+      );
+    case cardContentTypes.results:
+      return (
+        <div
+          style={{
+            paddingLeft: "5%",
+            paddingTop: "10px",
+            paddingRight: "5%"
+          }}
+        >
+          <ProgressBarCustom surveyResults={surveyResults} />
+          {/* TODO add some text and stuff here */}
+          <ResultsTable key={currentCategory} surveyResults={surveyResults} />
+        </div>
       );
     default:
       return (
@@ -97,8 +113,10 @@ export default function InfoCard() {
     </Transition>
   );
 
+  console.log("Survey results", surveyResults);
+
   return (
-    <Layout className="layout" style={{ height: "100vh" }}>
+    <Layout className="layout" style={{ maxHeight: "100vh" }}>
       <Layout.Header
         style={{
           backgroundColor:
