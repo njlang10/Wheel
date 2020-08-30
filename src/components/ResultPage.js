@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Typography, Button } from "antd";
+import React from "react";
+import { Typography, Button, Divider } from "antd";
 import { ResultsTable } from "../components/ResultsContent";
 import ProgressBarCustom from "../components/Progress";
 
@@ -15,17 +15,17 @@ export default function ResultsPage({ surveyResults, currentCategory }) {
     >
       <ProgressBarCustom surveyResults={surveyResults} />
       <Typography.Title level={3} style={{ paddingTop: "10px" }}>
-        Are you ready for a Soul Trasformation?
+        Are you ready for a Soul Transformation?
       </Typography.Title>
       <Typography.Text>
         Based on your assessment, you’re Ready for a Soul Shift.{" "}
       </Typography.Text>
-      <Typography.Text>
+      <Typography.Paragraph>
         What if you could bring “you” – the best version of “you” to the world
         every day? What if your energy was not directed at trying to “fix,” but
         rather consciously focused on demonstrating, with ease, all that is you
         on your very best day, every day?{" "}
-      </Typography.Text>
+      </Typography.Paragraph>
       <div style={{ paddingTop: "10px" }} />
       <Button
         href="https://soul-abode-coaching.mykajabi.com/"
@@ -34,9 +34,10 @@ export default function ResultsPage({ surveyResults, currentCategory }) {
         block
         type="primary"
       >
-        Start your Soul Care Journey Here
+        Yes, I'm Ready!
       </Button>
       <div style={{ paddingTop: "10px" }} />
+      <Divider type="horizontal" plain></Divider>
       <ResultsTable key={currentCategory} surveyResults={surveyResults} />
     </div>
   );

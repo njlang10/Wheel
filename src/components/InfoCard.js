@@ -5,6 +5,7 @@ import { Button, Layout, Row, Col } from "antd";
 import CardContent from "../components/CardContent";
 import InfoContent from "../components/InfoContent";
 import { ResultsTable } from "../components/ResultsContent";
+import ResultsPage from "../components/ResultPage";
 import ProgressBarCustom from "../components/Progress";
 import { wheel, categories } from "../constants/settings";
 
@@ -46,17 +47,10 @@ function CardContentSelector({
       );
     case cardContentTypes.results:
       return (
-        <div
-          style={{
-            paddingLeft: "5%",
-            paddingTop: "10px",
-            paddingRight: "5%"
-          }}
-        >
-          <ProgressBarCustom surveyResults={surveyResults} />
-          {/* TODO add some text and stuff here */}
-          <ResultsTable key={currentCategory} surveyResults={surveyResults} />
-        </div>
+        <ResultsPage
+          surveyResults={surveyResults}
+          currentCategory={currentCategory}
+        />
       );
     default:
       return (
@@ -113,8 +107,6 @@ export default function InfoCard() {
     </Transition>
   );
 
-  console.log("Survey results", surveyResults);
-
   return (
     <Layout className="layout" style={{ maxHeight: "100vh" }}>
       <Layout.Header
@@ -137,7 +129,7 @@ export default function InfoCard() {
       >
         <Row justify="space-between" style={{ height: "64px" }}>
           {transitionedTitle}
-          {cardContentView !== "info" ? (
+          {cardContentView !== "info" && cardContentView !== "results" ? (
             <Col>
               <Button
                 ghost
