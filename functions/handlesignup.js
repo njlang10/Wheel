@@ -17,6 +17,7 @@ exports.handler = async (event) => {
       SCORE: score
     }
   });
+  console.log("Made it to headers");
   const headers = {
     Authorization: `Basic ${base64.encode(
       `key:${process.env.REACT_APP_MAILCHIMP_KEY}`
