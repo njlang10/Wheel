@@ -5,6 +5,7 @@ exports.handler = async (event) => {
   const {
     body: { firstName, lastName, email, score }
   } = event;
+  console.log("event is ", event);
   const url =
     "https://us20.api.mailchimp.com/3.0/lists/97c5b41ca2/members?skip_merge_validation=true";
   const body = JSON.stringify({
@@ -23,7 +24,11 @@ exports.handler = async (event) => {
     Accept: "application/json",
     "Content-Type": "application/json"
   };
-  let response = fetch(url, { headers: headers, method: "post", body: body })
+  fetch(url, { headers: headers, method: "post", body: body })
     .then((response) => response.json())
     .then((res) => console.log(res));
+  return {
+    statusCode: 200,
+    body: "Successful"
+  };
 };
