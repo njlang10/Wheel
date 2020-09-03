@@ -20,6 +20,10 @@ p h1 {
   font: montserrat;
 }
 
+th {
+  background-color: rgb(200, 212, 212) !important;
+}
+
 /* For demo */
 .ant-carousel .slick-slide {
   text-align: center;
