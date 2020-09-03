@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { categories, ratingDetails } from "../constants/settings";
-import { Table, Typography, Form, Input, Button } from "antd";
+import { wheel } from "../constants/settings";
+import { Table, Typography, Form, Input, Button, Divider } from "antd";
 
 const calculateIndex = (score) => {
   if (score > 4) {
@@ -53,6 +54,32 @@ const calculateIndex = (score) => {
 //     )}
 //   </Transition>
 // );
+
+function postToMailChimp(newVals) {
+  const url =
+    "https://elated-heyrovsky-f6035a.netlify.app/.netlify/functions/handlesignup";
+  const body = JSON.stringify({
+    firstName: newVals.firstName,
+    lastName: newVals.lastName,
+    email: newVals.email,
+    score: "0"
+  });
+
+  const headers = {
+    "Content-Type": "application/x-www-form-urlencoded"
+  };
+
+  return fetch(url, { headers: headers, method: "post", body: body })
+    .then((response) => {
+      console.log("Got a response", response);
+      return response.json();
+    })
+    .then((json) => {
+      console.log("Json id is ", json.id);
+      return json.id;
+    })
+    .catch((error) => console.log("error in posting email", error));
+}
 
 function SignUp({ onSubmit }) {
   const [form] = Form.useForm();
@@ -107,38 +134,47 @@ function ResultsScore({
 
   return (
     <>
-      <div style={{ position: "relative" }}>
-        <Typography.Title level={2}>
+      <div
+        style={{
+          position: "relative"
+        }}
+      >
+        <Typography.Title level={4}>
           {/* TODO: Pick a specific color */}
           You are currently{" "}
-          <span style={{ color: ratingDetails[scoreResult].color }}>
-            {scoreResult}
-          </span>
+          <div style={{ fontSize: "30px" }}>{scoreResult.toUpperCase()}</div>
         </Typography.Title>
-        <Typography.Paragraph>
-          <span>
-            {ratingDetails[scoreResult].description}{" "}
-            {shouldShowSignup ? (
-              <>
-                <b>
-                  {""}Get your results mailed to you to start your personalized
-                  wellness journey
-                </b>
-              </>
-            ) : null}
-          </span>
+        <Typography.Paragraph style={{ fontSize: "15px" }}>
+          <span>{ratingDetails[scoreResult].description} </span>
+          {shouldShowSignup ? (
+            <>
+              <Divider />
+              <div></div>
+              <div>
+                <b>{""}Sign up to have your results mailed to you</b>
+              </div>
+            </>
+          ) : null}
           {shouldShowSignup ? (
             <SignUp
               key="signup"
               onSubmit={(formInfo) => {
-                setUserInfo((old) => {
-                  const newVals = {
-                    firstName: formInfo.getFieldValue("firstname"),
-                    lastName: formInfo.getFieldValue("lastname"),
-                    email: formInfo.getFieldValue("email"),
-                    isSignedUp: true
-                  };
-                  return { ...old, ...newVals };
+                const info = {
+                  firstName: formInfo.getFieldValue("firstname"),
+                  lastName: formInfo.getFieldValue("lastname"),
+                  email: formInfo.getFieldValue("email")
+                };
+                postToMailChimp(info).then((id) => {
+                  setUserInfo((old) => {
+                    const newVals = {
+                      firstName: formInfo.getFieldValue("firstname"),
+                      lastName: formInfo.getFieldValue("lastname"),
+                      email: formInfo.getFieldValue("email"),
+                      isSignedUp: true,
+                      id: id
+                    };
+                    return { ...old, ...newVals };
+                  });
                 });
               }}
             />
@@ -155,74 +191,84 @@ function ResultsScore({
   );
 }
 
-function ResultsContent({ surveyResults, currentCategory }) {
-  const [data, setData] = useState(() => {
-    const emptyOutcomes = [6, 4, 2, 0, -2, -4, -6].map((val) => {
-      return { outcome: val };
-    });
-    return emptyOutcomes.map((dummyCol) => {
-      const emptyCategory = categories.reduce((accum, c) => {
-        accum[c] = "";
-        return accum;
-      }, {});
-      return { ...dummyCol, ...emptyCategory };
-    });
+function ResultsTable({ surveyResults }) {
+  // Set up columns
+  const columns = [];
+
+  columns.push({
+    title: "Well-being State",
+    dataIndex: "state",
+    key: "state",
+    fixed: "left",
+    align: "center"
+  });
+  const categoryCols = categories.map((c) => {
+    return {
+      title: (
+        <div
+          style={{
+            color: wheel[c].color,
+            fontSize: "17px",
+            textAlign: "center"
+          }}
+        >
+          {c}
+        </div>
+      ),
+      dataIndex: c,
+      key: c,
+      render: (text) => {
+        return <div style={{ textAlign: "center" }}>text</div>;
+      }
+    };
+  });
+  const allColumns = [...columns, ...categoryCols];
+
+  const emptyRows = Object.keys(ratingDetails).map((rating, index) => {
+    return { key: index, state: rating };
   });
 
-  // Column setup
-  let columns = [];
-  const resultColumn = {
-    title: "outcome",
-    dataIndex: "outcome",
-    key: "outcome"
-  };
-  const fullColumns = categories.map((c) => {
-    return { title: c, dataIndex: c, key: c };
+  // Make a blank row for each category
+  /**
+   * {key: 0, state, Thriving, soul: "", connection: "", mindset: "", feelings: "", movement: "", surroundings: ""}
+   *
+   */
+  const dummyRows = emptyRows.map((outcome) => {
+    const emptyRow = categories.reduce((accum, c) => {
+      accum[c] = "";
+      return accum;
+    }, {});
+    return { ...outcome, ...emptyRow };
   });
-  columns = [resultColumn, ...fullColumns];
 
-  const rowToUpdate = surveyResults[currentCategory.key];
-  const score = Object.values(rowToUpdate).reduce((a, v) => {
-    return a + v;
-  }, 0);
+  // Search through each category, find the result for that category, then
+  // find it's corresponding state and match the data
+  categories.forEach((c, index) => {
+    const currentResult = Object.values(surveyResults[c]);
 
-  const indexToUpdate = calculateIndex(score);
-  // Wipe any old score
-  // Set score, but only do this if:
-  // surveyResults change
-  // category changes,
-  // indexToUpdate changes
-  useEffect(
-    () =>
-      setData((prev) => {
-        const newData = prev.map((value, index) => {
-          let newVal = value;
-          if (index !== indexToUpdate) {
-            newVal[currentCategory.key] = "";
-          } else {
-            newVal[currentCategory.key] = "X";
-          }
-          return newVal;
-        });
-        return newData;
-      }),
-    [surveyResults, currentCategory, indexToUpdate]
-  );
+    if (currentResult.length > 1) {
+      const result = calculateIndex(
+        currentResult.reduce((accum, result) => accum + result),
+        0
+      );
+      dummyRows.forEach((row) => {
+        if (row.state === result) {
+          row[c] = "x";
+        }
+      });
+    }
+  });
 
   return (
-    <>
-      <Typography.Title level={2}>Here are your results</Typography.Title>
-      <Typography.Paragraph>
-        You are {score} in the {currentCategory.title} category
-      </Typography.Paragraph>
-      <Table
-        columns={columns}
-        dataSource={data}
-        pagination={false}
-        scroll={{ x: 100 }}
-      />
-    </>
+    <Table
+      columns={allColumns}
+      dataSource={dummyRows}
+      sticky
+      pagination={false}
+      scroll={{ x: 950 }}
+      bordered
+    />
   );
 }
 
-export { ResultsScore, ResultsContent };
+export { ResultsScore, ResultsTable };

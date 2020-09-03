@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Transition } from "react-transition-group";
 import "antd/dist/antd.css";
-import { Typography, Button, Row } from "antd";
+import { Typography, Button } from "antd";
 // import Wheel from "../components/Wheel";
 import NewWheel from "../components/NewWheel";
 import ProgressBarCustom from "../components/Progress";
@@ -72,7 +72,7 @@ export default function InfoContent({
             {clickId.isClicked ? (
               <div style={{ height: "18px" }} />
             ) : (
-              'What is the "Soul Care Wheel" '
+              "What is the Soul Care Wheel?"
             )}
           </Typography.Title>
           <Typography.Paragraph
@@ -110,9 +110,11 @@ export default function InfoContent({
             block
             onClick={(_) => setCardContentView("survey")}
           >
-            {clickId.isClicked === true
-              ? "Click Here to Begin Assessment"
-              : "Touch the Wheel for More Information"}
+            <div style={{ fontWeight: "bold" }}>
+              {clickId.isClicked === true
+                ? "Click Here to Begin Assessment"
+                : "Touch the Wheel for More Information"}
+            </div>
           </Button>
           <div
             style={{
